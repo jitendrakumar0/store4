@@ -1,0 +1,997 @@
+
+// ? @@@@@@@@@@@@@@@@@@@@@@[  Products start  ]@@@@@@@@@@@@@@@@@@@@@@
+
+
+nav {
+    & .breadcrumb {
+        margin: 0;
+        padding-bottom: 16px;
+        padding-top: 20px;
+        & .breadcrumb-item {
+            color: #989898;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857;
+            & a {
+                color: #4d4d4d;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.42857;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            & .active {
+
+            }
+        }
+    }
+}
+[data-page-name=products] {
+    @include media-breakpoint(basic) {
+        .heroSection {
+            background-color: white;
+            position: relative;
+            margin-bottom: 32px;
+            & .carsoulSidePart {
+                max-height: 562px;
+                position: sticky;
+                top: 136px;
+                overflow: hidden;
+                & .slideLeft {
+                    padding-right: 16px;
+                    width: 96px !important;
+                    & .mySwiper {
+                        height: 100%;
+                        width: 100% !important;
+                        & .swiper-wrapper {
+                            width: 80px;
+                            flex-direction: column;
+                            & .swiper-slide {
+                                width: 100% !important;
+                                height: 100px !important;
+                                border: 1px solid #e6e6e6;
+                                cursor: pointer;
+                                &.swiper-slide-thumb-active {
+                                    border: 2px solid  #146EB4;
+                                    padding: 2px;
+                                }
+                                & img {
+                                    object-fit: contain;
+                                    object-position: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                & .slideRight {
+                    width: calc(100% - 96px);
+                    & .mySwiper2 {
+                        height: 100% !important;
+                        border: 1px solid #e6e6e6;
+                        position: relative;
+                        & .sharebtn {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            cursor: pointer;
+                            z-index: 1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid #e6e6e6;
+                            box-shadow: 0 2px 4px rgba(26,24,30,.24);
+                            & img {
+                                width: 28px;
+                                height: 28px;
+                            }
+                        }
+                        & .swiper-wrapper {
+                            & .swiper-slide {
+                                cursor: zoom-in;
+                                & img {
+                                    object-fit: contain;
+                                    object-position: top center;
+                                }
+                            }
+                        }
+                        & .swiper-button-next {
+            
+                        }
+                        & .swiper-button-prev {
+            
+                        }
+                    }
+                }
+            }
+            & .rightSidePart {
+                padding: 0px 0px 0px 32px;
+                & .productHeading {
+                    text-transform: capitalize;
+                    font-size: 20px;
+                    line-height: 28px;
+                    font-weight: 400;
+                    color: #1a181e;
+                }
+                & .startOuter {
+                    padding-top: 8px;
+                    & .startMiddal {
+                        & .startInner {
+                            gap: 4px;
+                            & .starImgOuter {
+                                width: 20px;
+                                height: 20px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                & .img {
+                
+                                }
+                                & .customImg {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 100%;
+                                    // inset: 0;
+                                    // z-index: 1;
+                                    & img {
+                                        position: absolute;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .ratingLink {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 1.42857;
+                        color: #1a181e;
+                        padding-left: 9px;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+                & .perPrize {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: #4d4d4d;
+                    padding-top: 12px;
+                }
+                & .prizingOuter {
+                    display: flex;
+                    align-items: center;
+                    padding-top: 12px;
+                    & .discountedPrice {
+                        margin-right: 8px;
+                        font-size: 26px;
+                        font-weight: 500;
+                        line-height: 32px;
+                        color: #1a181e;
+                    }
+                    & .originalPrice {
+                        margin-right: 8px;
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 26px;
+                        text-decoration: line-through;
+                        color: #808080;
+                    }
+                    & .discount {
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 28px;
+                        color: #EE741F;
+                    }
+                }
+                & .selectSize {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    color: #1a181e;
+                    padding-bottom: 12px;
+                }
+                & .selectValueOuter {
+                    & .selectRadioOuter {
+                        & .form-check-input {
+                            display: none;
+                            &:checked + .form-check-label {
+                                color: #146EB4;
+                                border-color: #146EB4;
+                                background-color: rgba(#146EB4, 0.1);
+                            }
+                        }
+                        & .form-check-label {
+                            cursor: pointer;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 5px;
+                            padding: 8px 16px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 20px;
+                            display: flex;
+                            border: 1px solid #e6e6e6;
+                            border-radius: 4px;
+                            color: #1a181e;
+                            &:hover {
+                                color: #146EB4;
+                                border-color: #146EB4;
+                                background-color: rgba(#146EB4, 0.1);
+                            }
+                        }
+                        // &:first-child {
+                        //     & .form-check-label {
+                        //         margin-left: 0;
+                        //     }
+                        // }
+                    }
+                }
+                & .btnOuter {
+                    margin-top: 20px;
+                    gap: 16px;
+                    & .addBagBtn {
+                        width: 100%;
+                        height: 48px;
+                        border-radius: 6px;
+                        font-size: 16px;
+                        line-height: 24px;
+                        border: 1px solid #146EB4;
+                        color: #146EB4;
+                        background-color: #fff;
+                        padding: 4px 11px;
+                        min-width: 80px;
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        max-width: 216px;
+                        font-weight: 500;
+                        &:hover {
+                            background-color: rgba(#146EB4, $alpha: 0.1);
+                        }
+                    }
+                    & .buyNowBtn {
+                        height: 48px;
+                        font-size: 16px;
+                        line-height: 24px;
+                        border-radius: 4px;
+                        padding: 4px 11px;
+                        min-width: 80px;
+                        flex: 1;
+                        display: flex;
+                        font-weight: 500;
+                        align-items: center;
+                        justify-content: center;
+                        max-width: 216px;
+                        color: #fff;
+                        background-color: #146EB4;
+                        &:hover {
+                            background-color: #177ccb;
+                        }
+                    }
+                }
+                & .serviesImg {
+                    gap: 24px;
+                    margin-top: 32px;
+                    margin-bottom: 32px;
+                    & .imgOuter {
+                        height: 33px;
+                    }
+                }
+                & .productsDetailsHeading {
+                    color: #1a181e;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                }
+                & .proSubheading {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    margin: 10px 0px;
+                }
+                & .productPra {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: #4d4d4d;
+                    margin: 10px 0px;
+                }
+                & .proList {
+                    & ul {
+                        list-style: none;
+                        margin: 0;
+                        margin-top: 10px;
+                        padding: 0;
+                        & li {
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            color: #4d4d4d;
+                        }
+                    }
+                }
+            }
+        }
+        .bigSectionDivider {
+            height: 8px;
+            background-color: $gray-300;
+            border: 0;
+            border-top: 1px solid $gray-600;
+            margin: 0;
+            padding: 0;
+        }        
+    }
+
+    // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+    @include media-breakpoint-up(sm) {}
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {}
+
+    @include media-breakpoint-up(xl) {}
+
+    @include media-breakpoint-up(xxl) {}
+
+
+    @include media-breakpoint-down(xxl) {
+        .heroSection {
+            & .carsoulSidePart {
+                & .slideLeft {
+                    & .mySwiper {
+                        & .swiper-wrapper {
+                            & .swiper-slide {
+                                &.swiper-slide-thumb-active {
+                                }
+                                & img {
+                                }
+                            }
+                        }
+                    }
+                }
+                & .slideRight {
+                    & .mySwiper2 {
+                        & .sharebtn {
+                            & img {
+                            }
+                        }
+                        & .swiper-wrapper {
+                            & .swiper-slide {
+                                & img {
+                                }
+                            }
+                        }
+                        & .swiper-button-next {
+            
+                        }
+                        & .swiper-button-prev {
+            
+                        }
+                    }
+                }
+            }
+            & .rightSidePart {
+                & .productHeading {
+                }
+                & .startOuter {
+                    & .startMiddal {
+                        & .startInner {
+                            & .starImgOuter {
+                                & .img {
+                
+                                }
+                                & .customImg {
+                                    & img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .ratingLink {
+                    }
+                }
+                & .perPrize {
+                }
+                & .prizingOuter {
+                    & .discountedPrice {
+                    }
+                    & .originalPrice {
+                    }
+                    & .discount {
+                    }
+                }
+                & .selectSize {
+                }
+                & .selectValueOuter {
+                    & .selectRadioOuter {
+                        & .form-check-input {
+                            &:checked + .form-check-label {
+                            }
+                        }
+                        & .form-check-label {
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .btnOuter {
+                    & .addBagBtn {
+                        &:hover {
+                        }
+                    }
+                    & .buyNowBtn {
+                        &:hover {
+                        }
+                    }
+                }
+                & .serviesImg {
+                    & .imgOuter {
+                    }
+                }
+                & .productsDetailsHeading {
+                }
+                & .proSubheading {
+                }
+                & .productPra {
+                }
+                & .proList {
+                    & ul {
+                        & li {
+                        }
+                    }
+                }
+            }
+        }
+        .bigSectionDivider {
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        .heroSection {
+            & .carsoulSidePart {
+                & .slideLeft {
+                    & .mySwiper {
+                        & .swiper-wrapper {
+                            & .swiper-slide {
+                                &.swiper-slide-thumb-active {
+                                }
+                                & img {
+                                }
+                            }
+                        }
+                    }
+                }
+                & .slideRight {
+                    & .mySwiper2 {
+                        & .sharebtn {
+                            & img {
+                            }
+                        }
+                        & .swiper-wrapper {
+                            & .swiper-slide {
+                                & img {
+                                }
+                            }
+                        }
+                        & .swiper-button-next {
+            
+                        }
+                        & .swiper-button-prev {
+            
+                        }
+                    }
+                }
+            }
+            & .rightSidePart {
+                & .productHeading {
+                }
+                & .startOuter {
+                    & .startMiddal {
+                        & .startInner {
+                            & .starImgOuter {
+                                & .img {
+                
+                                }
+                                & .customImg {
+                                    & img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .ratingLink {
+                    }
+                }
+                & .perPrize {
+                }
+                & .prizingOuter {
+                    & .discountedPrice {
+                    }
+                    & .originalPrice {
+                    }
+                    & .discount {
+                    }
+                }
+                & .selectSize {
+                }
+                & .selectValueOuter {
+                    & .selectRadioOuter {
+                        & .form-check-input {
+                            &:checked + .form-check-label {
+                            }
+                        }
+                        & .form-check-label {
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .btnOuter {
+                    & .addBagBtn {
+                        &:hover {
+                        }
+                    }
+                    & .buyNowBtn {
+                        &:hover {
+                        }
+                    }
+                }
+                & .serviesImg {
+                    & .imgOuter {
+                    }
+                }
+                & .productsDetailsHeading {
+                }
+                & .proSubheading {
+                }
+                & .productPra {
+                }
+                & .proList {
+                    & ul {
+                        & li {
+                        }
+                    }
+                }
+            }
+        }
+        .bigSectionDivider {
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .heroSection {
+            & .carsoulSidePart {
+                position: static;
+                margin-bottom: 16px;
+                height: auto !important;
+                max-height: unset !important;
+                & .row {
+                    height: unset !important;
+                }
+                & .slideLeft {
+                    order: 2;
+                    width: 100% !important;
+                    height: auto !important;
+                    padding: 0 16px !important;
+                    & .mySwiper {
+                        width: 100%;
+                        & .swiper-wrapper {
+                            flex-direction: row;
+                            width: 100%;
+                            & .swiper-slide {
+                                margin-right: 12px;
+                                margin-top: 16px;
+                                width: 80px !important ;
+                                height: 90px;
+                                &.swiper-slide-thumb-active {
+                                }
+                                & img {
+                                }
+                            }
+                        }
+                    }
+                }
+                & .slideRight {
+                    & .mySwiper2 {
+                        & .sharebtn {
+                            & img {
+                            }
+                        }
+                        & .swiper-wrapper {
+                            & .swiper-slide {
+                                & img {
+                                }
+                            }
+                        }
+                        & .swiper-button-next {
+            
+                        }
+                        & .swiper-button-prev {
+            
+                        }
+                    }
+                }
+            }
+            & .rightSidePart {
+                padding: 0 16px;
+                & .productHeading {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                & .startOuter {
+                    & .startMiddal {
+                        & .startInner {
+                            & .starImgOuter {
+                                height: 16px;
+                                width: 16px;
+                                & .img {
+                                }
+                                & .customImg {
+                                    & img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .ratingLink {
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+                & .perPrize {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+                & .prizingOuter {
+                    & .discountedPrice {
+                        margin-right: 4px;
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 28px;
+                    }
+                    & .originalPrice {
+                        margin-right: 4px;
+                        font-size: 16px;
+                        font-weight: 300;
+                        line-height: 24px;
+                    }
+                    & .discount {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                    }
+                }
+                & .selectSize {
+                }
+                & .selectValueOuter {
+                    margin: 0;
+                    & .selectRadioOuter {
+                        & .form-check-input {
+                            &:checked + .form-check-label {
+                            }
+                        }
+                        & .form-check-label {
+                            &:hover {
+                            }
+                        }
+                        &:first-child {
+                        }
+                    }
+                }
+                & .btnOuter {
+                    & .addBagBtn {
+                        max-width: 100%;
+                        &:hover {
+                        }
+                    }
+                    & .buyNowBtn {
+                        max-width: 100%;
+                        &:hover {
+                        }
+                    }
+                }
+                & .serviesImg {
+                    justify-content: space-between;
+                    & .imgOuter {
+                    }
+                }
+                & .productsDetailsHeading {
+                }
+                & .proSubheading {
+                }
+                & .productPra {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                & .proList {
+                    & ul {
+                        & li {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .bigSectionDivider {
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .heroSection {
+            & .carsoulSidePart {
+                & .slideLeft {
+                    & .mySwiper {
+                        & .swiper-wrapper {
+                            & .swiper-slide {
+                                &.swiper-slide-thumb-active {
+                                }
+                                & img {
+                                }
+                            }
+                        }
+                    }
+                }
+                & .slideRight {
+                    & .mySwiper2 {
+                        & .sharebtn {
+                            & img {
+                            }
+                        }
+                        & .swiper-wrapper {
+                            & .swiper-slide {
+                                & img {
+                                }
+                            }
+                        }
+                        & .swiper-button-next {
+            
+                        }
+                        & .swiper-button-prev {
+            
+                        }
+                    }
+                }
+            }
+            & .rightSidePart {
+                & .productHeading {
+                }
+                & .startOuter {
+                    & .startMiddal {
+                        & .startInner {
+                            & .starImgOuter {
+                                & .img {
+                
+                                }
+                                & .customImg {
+                                    & img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .ratingLink {
+                    }
+                }
+                & .perPrize {
+                }
+                & .prizingOuter {
+                    & .discountedPrice {
+                    }
+                    & .originalPrice {
+                    }
+                    & .discount {
+                    }
+                }
+                & .selectSize {
+                }
+                & .selectValueOuter {
+                    & .selectRadioOuter {
+                        & .form-check-input {
+                            &:checked + .form-check-label {
+                            }
+                        }
+                        & .form-check-label {
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .btnOuter {
+                    position: fixed;
+                    bottom: 0;
+                    width: 100vw;
+                    background-color: white;
+                    margin: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 16px;
+                    z-index: 99;
+                    & .addBagBtn {
+                        &:hover {
+                        }
+                    }
+                    & .buyNowBtn {
+                        &:hover {
+                        }
+                    }
+                }
+                & .serviesImg {
+                    & .imgOuter {
+                    }
+                }
+                & .productsDetailsHeading {
+                }
+                & .proSubheading {
+                }
+                & .productPra {
+                }
+                & .proList {
+                    & ul {
+                        & li {
+                        }
+                    }
+                }
+            }
+        }
+        .bigSectionDivider {
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .heroSection {
+            padding: 0;
+            & .container {
+                padding: 0;
+            }
+            & .carsoulSidePart {
+                & .slideLeft {
+                    & .mySwiper {
+                        & .swiper-wrapper {
+                            & .swiper-slide {
+                                &.swiper-slide-thumb-active {
+                                }
+                                & img {
+                                }
+                            }
+                        }
+                    }
+                }
+                & .slideRight {
+                    & .mySwiper2 {
+                        & .sharebtn {
+                            & img {
+                            }
+                        }
+                        & .swiper-wrapper {
+                            & .swiper-slide {
+                                & img {
+                                }
+                            }
+                        }
+                        & .swiper-button-next {
+            
+                        }
+                        & .swiper-button-prev {
+            
+                        }
+                    }
+                }
+            }
+            & .rightSidePart {
+                & .productHeading {
+                }
+                & .startOuter {
+                    & .startMiddal {
+                        & .startInner {
+                            & .starImgOuter {
+                                & .img {
+                
+                                }
+                                & .customImg {
+                                    & img {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .ratingLink {
+                    }
+                }
+                & .perPrize {
+                }
+                & .prizingOuter {
+                    & .discountedPrice {
+                    }
+                    & .originalPrice {
+                    }
+                    & .discount {
+                    }
+                }
+                & .selectSize {
+                }
+                & .selectValueOuter {
+                    & .selectRadioOuter {
+                        & .form-check-input {
+                            &:checked + .form-check-label {
+                            }
+                        }
+                        & .form-check-label {
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .btnOuter {
+                    & .addBagBtn {
+                        &:hover {
+                        }
+                    }
+                    & .buyNowBtn {
+                        &:hover {
+                        }
+                    }
+                }
+                & .serviesImg {
+                    & .imgOuter {
+                    }
+                }
+                & .productsDetailsHeading {
+                }
+                & .proSubheading {
+                }
+                & .productPra {
+                }
+                & .proList {
+                    & ul {
+                        & li {
+                        }
+                    }
+                }
+            }
+        }
+        .bigSectionDivider {
+        }
+    }
+}
+
+[data-bs-theme=dark] {
+    & [data-page-name=products] {
+        @include dark-media-breakpoint(basic) {
+            
+        }
+
+        // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+        @include dark-media-breakpoint-up(sm) {
+        }
+        @include dark-media-breakpoint-up(md) {
+        }
+        @include dark-media-breakpoint-up(lg) {
+        }
+        @include dark-media-breakpoint-up(xl) {
+        }
+        @include dark-media-breakpoint-up(xxl) {
+        }
+    
+    
+        @include dark-media-breakpoint-down(xxl) {
+        }
+        @include dark-media-breakpoint-down(xl) {
+        }
+        @include dark-media-breakpoint-down(lg) {
+        }
+        @include dark-media-breakpoint-down(md) {
+        }
+        @include dark-media-breakpoint-down(sm) {
+        }
+    }
+}
+
+// ! @@@@@@@@@@@@@@@@@@@@@@[  Products start  ]@@@@@@@@@@@@@@@@@@@@@@
+

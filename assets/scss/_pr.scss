@@ -1,0 +1,1046 @@
+
+// ? @@@@@@@@@@@@@@@@@@@@@@[  example start  ]@@@@@@@@@@@@@@@@@@@@@@
+    @include media-breakpoint(basic) {
+        .topNavbar {
+            z-index: 1021;
+            border-bottom: 1px solid $gray-200;
+            & .navbarTopRow {
+                & .logo {
+                    color: $black;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    & img {
+                        max-width: 160px;
+                        width: auto;
+                        object-fit: contain;
+                        height: 52px;
+                        border-radius: 6px;
+                    }
+                    & span {
+                        font-size: 25px;
+                        margin-left: 16px;
+                    }
+                }
+                & .serachBox {
+                    & .form-control {
+                        width: 100%;
+                        background: #f2f2f2;
+                        color: #4d4d4d;
+                        opacity: 1;
+                        border: 1px solid rgba(0,0,0,0);
+                        border-radius: 6px;
+                        padding: 7px 28px 6px 40px;
+                        font-size: 16px;
+                        line-height: 26px;
+                    }
+                    & .searchIcon {    
+                        height: 20px;
+                        width: 20px;
+                        position: absolute;
+                        top: 10px;
+                        left: 12px;
+                    }
+                }
+                & .navBtnBox {
+                    & .navBtn {
+                        & .buttonAnchor {
+                            border-radius: 20px;
+                            padding: 6px 10px;
+                            display: flex;
+                            align-items: center;
+                            & img {
+                            }
+                            & span {
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 20px;
+                                color: #4d4d4d;
+                                margin-left: 8px;
+                            }
+                            &:hover {
+                                background-color: lighten($gray-500, 24);
+                            }
+                            &.active {
+                                background-color: lighten($theme1, 57);
+                                pointer-events: auto;
+                                & span {
+                                    color: $theme1;
+                                }
+                                & img {
+                                    &.defaultImg {
+                                        display: none;
+                                    }
+                                    &.activeImg {
+                                        display: block !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .navBarBottomRow {
+                & .navLinks {
+                    & .navLinkItem {
+                        & .navLinkAnchor {
+                            font-size: 16px;
+                            line-height: 24px;
+                            text-decoration: none;
+                            color: $black;
+                            padding: 4px 12px;
+                            border-radius: 20px;
+                            white-space: nowrap;
+                            font-weight: 500;
+                            &:hover {
+                                background-color: lighten($gray-500, 24);
+                            }
+                        }
+                    }
+                }
+                & .menuBtn {
+                    position: absolute;
+                    right: 0;
+                    width: 50px;
+                    background: white;
+                    top: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    cursor: pointer;
+                }
+            }
+            & .navbarThirdRow {
+                & .backAnchor {
+                    display: inline-flex;
+                    align-items: center;
+                    & img {
+                        margin-right: 8px;
+                    }
+                    & .productName {
+                        font-size: 18px;
+                        line-height: 26px;
+                        font-weight: 500;
+                        color: $black;
+                        margin-right: 2px;
+                        text-overflow: ellipsis;
+                        word-break: break-word;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        display: -webkit-box;
+                        overflow: hidden;
+                    }
+                    & .productQty {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $black;
+                    }
+                }
+                & .sortDropdown {
+                    & .dropdown-toggle {
+                        & span {
+                            padding-right: 8px;
+                            font-size: 14px;
+                            line-height: 20px;
+                            font-weight: 500;
+                            color: $black;
+                            &:last-child {
+                                color: $theme1;
+                                padding-right: 20px;
+                            }
+                        }
+                        &::after {
+                            border: 0;
+                            background-image: url(./../img/svg/downArrow.svg);
+                            height: 20px;
+                            width: 20px;
+                            background-size: 20px;
+                            top: 50%;
+                            position: absolute;
+                            transform: translateY(-50%);
+                            right: 0;
+                        }
+                    }
+                    & .dropdown-menu {
+                        width: 13rem;
+                        & .radioBox {
+                            display: flex;
+                            align-items: center;
+                            & .radioInput {
+                                height: 18px;
+                                width: 18px;
+                            }
+                            & .formLabel {
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: $black;
+                                font-weight: 500;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menuOffcanvas {
+            padding: 24px 16px 0 16px;
+            border: 0 !important;
+            & .offcanvas-header {
+                padding-bottom: 16px !important;
+                & .offcanvas-title {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 26px;
+                    color: $black;
+                }
+                border-bottom: 1px solid $gray-200;
+            }
+            & .offcanvas-body {
+                & .menuLinks {
+                    & .menuLinkItem {
+                        margin-top: 16px;
+                        & .linkAnchor {
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: $black;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+        .productFluidContainer{
+            & .productContainer{
+                & .stickySectionHeader {
+                    top: 123px;
+                }
+                & .productMainHeading{
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 8px 0;
+                    font-size: 20px;
+                    line-height: 32px;
+                    display: flex;
+                    font-weight: 500!important;
+                    border-bottom: 1px solid rgb(212, 207, 207);
+                }
+                & .productCard  {
+                    & .productImgBox {
+                        & .productImgCarousel{
+                            & .owl-stage-outer{
+                                border-radius: 10px;
+                                & .cardImg{
+                                    overflow: hidden;
+                                    & img{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        transition: 0.3s ease-in-out;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .productDetailBox{
+                        & .productName{
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 18px;
+                            text-decoration: none;
+                            margin: 15px 0 10px 0;
+                            color: black;
+                            display: -webkit-box;
+                            max-width: 400px;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        & .productPrice{
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 20px;
+                            margin-bottom: 12px;
+                            & span{
+                                &:first-child{
+                                    font-size: 14px;
+                                    font-weight: 300;
+                                    line-height: 20px;
+                                    color: $gray-900;
+                                    margin-right: 5px;
+                                    margin-left: 5px;
+                                }
+                                &:last-child{
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    line-height: 20px;
+                                    color: $orange;
+                                }
+                            }
+                        }
+                        & .addmoreBtn{
+                            border: 1px solid $theme1;
+                            border-radius: 5px;
+                            height: 28px;
+                            width: 80px;
+                            color: $theme1;
+                            background-color: $white;
+                            padding: 4px 11px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 18px;
+                            overflow: hidden;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: 0.3s linear;
+                            position: relative;
+                            z-index: 9;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: lighten($theme1, 55);
+                            }
+                            & img{
+                                margin-left: 5px;
+                                height: 12px;
+                                width: 12px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        & .productImgBox {
+                            & .cardImg {
+                                & img {
+                                    transform: scale(1.05);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+    @include media-breakpoint-up(sm) {}
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {}
+
+    @include media-breakpoint-up(xl) {}
+
+    @include media-breakpoint-up(xxl) {}
+
+
+    @include media-breakpoint-down(xxl) {
+        .topNavbar {
+            & .navbarTopRow {
+                & .logo {
+                    & img {
+                    }
+                    & span {
+                    }
+                }
+                & .serachBox {
+                    & .form-control {
+                    }
+                    & .searchIcon { 
+                    }
+                }
+                & .navBtnBox {
+                    & .navBtn {
+                        & .buttonAnchor {
+                            & img {
+                            }
+                            & span {
+                            }
+                            &:hover {
+                            }
+                            &.active {
+                                & span {
+                                }
+                                & img {
+                                    &.defaultImg {
+                                    }
+                                    &.activeImg {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .navBarBottomRow {
+                & .navLinks {
+                    & .navLinkItem {
+                        & .navLinkAnchor {
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .menuBtn {
+                }
+            }
+            & .navbarThirdRow {
+                & .backAnchor {
+                    & img {
+                    }
+                    & .productName {
+                    }
+                    & .productQty {
+                    }
+                }
+                & .sortDropdown {
+                    & .dropdown-toggle {
+                        & span {
+                            &:last-child {
+                            }
+                        }
+                        &::after {
+                        }
+                    }
+                    & .dropdown-menu {
+                        & .radioBox {
+                            & .radioInput {
+                            }
+                            & .formLabel {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menuOffcanvas {
+            & .offcanvas-header {
+                & .offcanvas-title {
+                }
+            }
+            & .offcanvas-body {
+                & .menuLinks {
+                    & .menuLinkItem {
+                        & .linkAnchor {
+                        }
+                    }
+                }
+            }
+        }
+        .productFluidContainer{
+            & .productContainer{
+                & .stickySectionHeader {
+                }
+                & .productMainHeading{
+                }
+                & .productCard  {
+                    & .productImgBox {
+                        & .productImgCarousel{
+                            & .owl-stage-outer{
+                                & .cardImg{
+                                    & img{
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .productDetailBox{
+                        & .productName{
+                        }
+                        & .productPrice{
+                            & span{
+                                &:first-child{
+                                }
+                                &:last-child{
+                                }
+                            }
+                        }
+                        & .addmoreBtn{
+                            &:hover{
+                            }
+                            & img{
+                            }
+                        }
+                    }
+                    &:hover {
+                        & .productImgBox {
+                            & .cardImg {
+                                & img {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xl) {
+        .topNavbar {
+            & .navbarTopRow {
+                & .logo {
+                    & img {
+                    }
+                    & span {
+                    }
+                }
+                & .serachBox {
+                    & .form-control {
+                    }
+                    & .searchIcon { 
+                    }
+                }
+                & .navBtnBox {
+                    & .navBtn {
+                        & .buttonAnchor {
+                            & img {
+                            }
+                            & span {
+                            }
+                            &:hover {
+                            }
+                            &.active {
+                                & span {
+                                }
+                                & img {
+                                    &.defaultImg {
+                                    }
+                                    &.activeImg {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .navBarBottomRow {
+                & .navLinks {
+                    & .navLinkItem {
+                        & .navLinkAnchor {
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .menuBtn {
+                }
+            }
+            & .navbarThirdRow {
+                & .backAnchor {
+                    & img {
+                    }
+                    & .productName {
+                    }
+                    & .productQty {
+                    }
+                }
+                & .sortDropdown {
+                    & .dropdown-toggle {
+                        & span {
+                            &:last-child {
+                            }
+                        }
+                        &::after {
+                        }
+                    }
+                    & .dropdown-menu {
+                        & .radioBox {
+                            & .radioInput {
+                            }
+                            & .formLabel {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menuOffcanvas {
+            & .offcanvas-header {
+                & .offcanvas-title {
+                }
+            }
+            & .offcanvas-body {
+                & .menuLinks {
+                    & .menuLinkItem {
+                        & .linkAnchor {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .topNavbar {
+            & .navbarTopRow {
+                & .logo {
+                    & img {
+                    }
+                    & span {
+                    }
+                }
+                & .serachBox {
+                    & .form-control {
+                    }
+                    & .searchIcon { 
+                    }
+                }
+                & .navBtnBox {
+                    & .navBtn {
+                        & .buttonAnchor {
+                            & img {
+                            }
+                            & span {
+                            }
+                            &:hover {
+                            }
+                            &.active {
+                                & span {
+                                }
+                                & img {
+                                    &.defaultImg {
+                                    }
+                                    &.activeImg {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .navBarBottomRow {
+                & .navLinks {
+                    & .navLinkItem {
+                        & .navLinkAnchor {
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .menuBtn {
+                }
+            }
+            & .navbarThirdRow {
+                & .backAnchor {
+                    & img {
+                    }
+                    & .productName {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    & .productQty {
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+                & .sortDropdown {
+                    & .dropdown-toggle {
+                        & span {
+                            &:last-child {
+                            }
+                        }
+                        &::after {
+                        }
+                    }
+                    & .dropdown-menu {
+                        & .radioBox {
+                            & .radioInput {
+                            }
+                            & .formLabel {
+                            }
+                        }
+                    }
+                }
+            }
+            &.nav-active {
+                position: sticky;
+                top: -52px;
+                z-index: 1021;
+                padding-top: 0 !important;
+                & .mobHiddenSticky {
+                    // height: 0px;
+                    // overflow: hidden;
+                }
+            }
+        }
+        .menuOffcanvas {
+            width: 100% !important;
+            & .offcanvas-header {
+                & .offcanvas-title {
+                }
+            }
+            & .offcanvas-body {
+                & .menuLinks {
+                    & .menuLinkItem {
+                        & .linkAnchor {
+                        }
+                    }
+                }
+            }
+        }
+        .productFluidContainer{
+            & .productContainer{
+                & .stickySectionHeader {
+                    top: 72px;
+                }
+                & .productMainHeading{
+                }
+                & .productCard  {
+                    & .productImgBox {
+                        & .productImgCarousel{
+                            & .owl-stage-outer{
+                                & .cardImg{
+                                    & img{
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .productDetailBox{
+                        & .productName{
+                        }
+                        & .productPrice{
+                            & span{
+                                &:first-child{
+                                }
+                                &:last-child{
+                                }
+                            }
+                        }
+                        & .addmoreBtn{
+                            &:hover{
+                            }
+                            & img{
+                            }
+                        }
+                    }
+                    &:hover {
+                        & .productImgBox {
+                            & .cardImg {
+                                & img {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .topNavbar {
+            & .navbarTopRow {
+                & .logo {
+                    & img {
+                    }
+                    & span {
+                    }
+                }
+                & .serachBox {
+                    & .form-control {
+                    }
+                    & .searchIcon { 
+                    }
+                }
+                & .navBtnBox {
+                    & .navBtn {
+                        & .buttonAnchor {
+                            & img {
+                            }
+                            & span {
+                            }
+                            &:hover {
+                            }
+                            &.active {
+                                & span {
+                                }
+                                & img {
+                                    &.defaultImg {
+                                    }
+                                    &.activeImg {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .navBarBottomRow {
+                & .navLinks {
+                    & .navLinkItem {
+                        & .navLinkAnchor {
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .menuBtn {
+                }
+            }
+            & .navbarThirdRow {
+                & .backAnchor {
+                    & img {
+                    }
+                    & .productName {
+                    }
+                    & .productQty {
+                    }
+                }
+                & .sortDropdown {
+                    & .dropdown-toggle {
+                        & span {
+                            &:last-child {
+                            }
+                        }
+                        &::after {
+                        }
+                    }
+                    & .dropdown-menu {
+                        & .radioBox {
+                            & .radioInput {
+                            }
+                            & .formLabel {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menuOffcanvas {
+            & .offcanvas-header {
+                & .offcanvas-title {
+                }
+            }
+            & .offcanvas-body {
+                & .menuLinks {
+                    & .menuLinkItem {
+                        & .linkAnchor {
+                        }
+                    }
+                }
+            }
+        }
+        .productFluidContainer{
+            & .productContainer{
+                & .stickySectionHeader {
+                }
+                & .productMainHeading{
+                }
+                & .productCard  {
+                    & .productImgBox {
+                        & .productImgCarousel{
+                            & .owl-stage-outer{
+                                & .cardImg{
+                                    & img{
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .productDetailBox{
+                        & .productName{
+                        }
+                        & .productPrice{
+                            & span{
+                                &:first-child{
+                                }
+                                &:last-child{
+                                }
+                            }
+                        }
+                        & .addmoreBtn{
+                            &:hover{
+                            }
+                            & img{
+                            }
+                        }
+                    }
+                    &:hover {
+                        & .productImgBox {
+                            & .cardImg {
+                                & img {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .topNavbar {
+            & .navbarTopRow {
+                & .logo {
+                    & img {
+                    }
+                    & span {
+                    }
+                }
+                & .serachBox {
+                    & .form-control {
+                    }
+                    & .searchIcon { 
+                    }
+                }
+                & .navBtnBox {
+                    & .navBtn {
+                        & .buttonAnchor {
+                            & img {
+                            }
+                            & span {
+                            }
+                            &:hover {
+                            }
+                            &.active {
+                                & span {
+                                }
+                                & img {
+                                    &.defaultImg {
+                                    }
+                                    &.activeImg {
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .navBarBottomRow {
+                & .navLinks {
+                    & .navLinkItem {
+                        & .navLinkAnchor {
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+                & .menuBtn {
+                }
+            }
+            & .navbarThirdRow {
+                & .backAnchor {
+                    & img {
+                    }
+                    & .productName {
+                    }
+                    & .productQty {
+                    }
+                }
+                & .sortDropdown {
+                    & .dropdown-toggle {
+                        & span {
+                            &:last-child {
+                            }
+                        }
+                        &::after {
+                        }
+                    }
+                    & .dropdown-menu {
+                        & .radioBox {
+                            & .radioInput {
+                            }
+                            & .formLabel {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menuOffcanvas {
+            & .offcanvas-header {
+                & .offcanvas-title {
+                }
+            }
+            & .offcanvas-body {
+                & .menuLinks {
+                    & .menuLinkItem {
+                        & .linkAnchor {
+                        }
+                    }
+                }
+            }
+        }
+        .productFluidContainer{
+            & .productContainer{
+                & .stickySectionHeader {
+                }
+                & .productMainHeading{
+                }
+                & .productCard  {
+                    & .productImgBox {
+                        & .productImgCarousel{
+                            & .owl-stage-outer{
+                                & .cardImg{
+                                    & img{
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .productDetailBox{
+                        & .productName{
+                        }
+                        & .productPrice{
+                            & span{
+                                &:first-child{
+                                }
+                                &:last-child{
+                                }
+                            }
+                        }
+                        & .addmoreBtn{
+                            &:hover{
+                            }
+                            & img{
+                            }
+                        }
+                    }
+                    &:hover {
+                        & .productImgBox {
+                            & .cardImg {
+                                & img {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+[data-bs-theme=dark] {
+    & [data-page-name=example] {
+        @include dark-media-breakpoint(basic) {
+            
+        }
+
+        // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+        @include dark-media-breakpoint-up(sm) {
+        }
+        @include dark-media-breakpoint-up(md) {
+        }
+        @include dark-media-breakpoint-up(lg) {
+        }
+        @include dark-media-breakpoint-up(xl) {
+        }
+        @include dark-media-breakpoint-up(xxl) {
+        }
+    
+    
+        @include dark-media-breakpoint-down(xxl) {
+        }
+        @include dark-media-breakpoint-down(xl) {
+        }
+        @include dark-media-breakpoint-down(lg) {
+        }
+        @include dark-media-breakpoint-down(md) {
+        }
+        @include dark-media-breakpoint-down(sm) {
+        }
+    }
+}
+
+// ! @@@@@@@@@@@@@@@@@@@@@@[  example start  ]@@@@@@@@@@@@@@@@@@@@@@
+

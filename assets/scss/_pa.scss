@@ -1,0 +1,560 @@
+
+// ? @@@@@@@@@@@@@@@@@@@@@@[  example start  ]@@@@@@@@@@@@@@@@@@@@@@
+[data-page-name=categorypage] {
+    @include media-breakpoint(basic) {
+        .categoryContainerFluid{
+            & .categoryContainer{
+                & .categoryBreadcrumb{
+                    // margin-top: 24px;
+                    // margin-bottom: 20px;
+                    & .categoryBreadcrumbul{
+                        & .categorybreadcrumbli{
+                            color: lighten($color: $black, $amount: 55);
+                            font-size: 14px;
+                            font-family: 400;
+                            & .categorybreadcrumbanchor{
+                                text-decoration: none;
+                                color: lighten($color: $black, $amount: 30)!important;
+                                font-size: 14px;
+                                font-family: 400;
+                            }
+                        }
+                    }
+                }  
+                & .categoryLeftPart{
+                    width: 254px;
+                    & .categoryFilterbox{
+                        border: 1px solid $gray-300;
+                        border-radius: 5px;
+                        & .filterHeader{
+                            padding: 20px;
+                            border-bottom: 1px solid $gray-300;
+                            & .filtertxt{
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 24px;
+                                color: $black;
+                            }
+                            & .delete{
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 20px;
+                                color: $red;
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        & .categorySizebox{
+                            padding: 16px;
+                            border-bottom: 1px solid $gray-300;
+                            & .categorySizeHead{
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 20px;
+                                color: $black;
+                                margin-bottom: 10px;
+                            }
+                            & .categoryFormCheck{
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 20px;
+                                color: $black;
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 10px;
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                                & .formInp{
+                                    width: 20px;
+                                    height: 20px;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                    &:focus{
+                                        box-shadow: none;
+                                        border: 1px solid $gray-500;
+                                    }
+                                    &:checked{
+                                        background-color: $theme1 !important;
+                                    }
+                                }
+                                & .formCheck{
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 20px;
+                                    color: $black;
+                                    padding-left: 15px;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                        & .categoryPricebox{
+                            padding: 20px;
+                            border-bottom: 1px solid $gray-300;
+                            & .categorySizeHead{
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 20px;
+                                color: $black;
+                                margin-bottom: 10px;
+                            }
+                            & .categoryFormCheck{
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 20px;
+                                color: $black;
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 10px;
+                                &:hover{
+                                    cursor: pointer;
+                                }
+                                & .formInp{
+                                    width: 20px;
+                                    height: 20px;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                    &:focus{
+                                        box-shadow: none;
+                                        border: 1px solid $gray-500;
+                                    }
+                                    &:checked{
+                                        background-color: $theme1 !important;
+                                    }
+                                }
+                                & .formCheck{
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 20px;
+                                    color: $black;
+                                    padding-left: 15px;
+                                    &:hover{
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                & .categoryRightPart{
+                    width: calc(100% - 254px);
+                    & .productCard  {
+                        & .productImgBox {
+                            & .productImgCarousel{
+                                & .owl-stage-outer{
+                                    border-radius: 10px;
+                                    & .cardImg{
+                                        overflow: hidden;
+                                        & img{
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                            transition: 0.3s ease-in-out;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        & .productDetailBox{
+                            & .productName{
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 18px;
+                                text-decoration: none;
+                                margin: 15px 0 10px 0;
+                                color: black;
+                                display: -webkit-box;
+                                max-width: 400px;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                            & .productPrice{
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 20px;
+                                margin-bottom: 12px;
+                                & span{
+                                    &:first-child{
+                                        font-size: 14px;
+                                        font-weight: 300;
+                                        line-height: 20px;
+                                        color: #808080;
+                                        margin-right: 5px;
+                                        margin-left: 5px;
+                                    }
+                                    &:last-child{
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        line-height: 20px;
+                                        color: #ee741f;
+                                    }
+                                }
+                            }
+                            & .addmoreBtn{
+                                border: 1px solid #63A2D2;
+                                border-radius: 5px;
+                                height: 28px;
+                                width: 80px;
+                                color: #63A2D2;
+                                background-color: white;
+                                padding: 4px 11px;
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 18px;
+                                overflow: hidden;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                transition: 0.3s linear;
+                                position: relative;
+                                z-index: 9;
+                                &:hover{
+                                    background-color: #d5e2ec;
+                                }
+                                & img{
+                                    margin-left: 5px;
+                                    height: 12px;
+                                    width: 12px;
+                                }
+                            }
+                        }
+                        &:hover {
+                            & .productImgBox {
+                                & .cardImg {
+                                    & img {
+                                        transform: scale(1.1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .categoryFilterBtns{
+            height: 46px;
+            & .categoryFiltercontainer{
+                border-top: 1px solid;
+                border-color: lighten($color: $black, $amount: 85);
+                & .forPadding{
+                    width: 100%;
+                    height: 46px;
+                    & .sortBtn{
+                        background-color: white !important;
+                        border: none;
+                        border-right: 1px solid;
+                        border-color: lighten($color: $black, $amount: 85);
+                        width: 100%;
+                        & img{
+    
+                        }
+                        & .btnName{
+                            margin-left: 6px;
+                            color: $black;
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                    }
+                    & .filterBtn{
+                        background-color: white !important;
+                        border: none;
+                        width: 100%;
+                        & img{
+    
+                        }
+                        & .btnName{
+                            margin-left: 6px;
+                            color: $black;
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+        & .categoryBottomTextBg{
+            background-color: lighten($color: $black, $amount: 98);
+            // height: 100%;
+            padding: 32px 0;
+            margin-top: 32px;
+        }
+        & .categoryBottomMainHeading{
+            margin: 8px 0 32px;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 36px;
+            color: $black;
+        }
+        & .text{
+            margin-top: 6px;
+            margin-bottom: 6px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $black;
+        }
+    }
+    // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+    @include media-breakpoint-up(sm) {}
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {}
+
+    @include media-breakpoint-up(xl) {}
+
+    @include media-breakpoint-up(xxl) {}
+
+
+    @include media-breakpoint-down(xxl) {}
+
+    @include media-breakpoint-down(xl) {}
+
+    @include media-breakpoint-down(lg) {}
+
+    @include media-breakpoint-down(md) {}
+
+    @include media-breakpoint-down(sm) {}
+}
+.sortBtnOffcanvas{
+    width: 100% !important;
+    & .offcanvasHeader{
+        padding: 24px 16px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        & .offcanvasTitle{
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+        & .closeBtn{
+            background-color: white !important;
+            border: none;
+        }
+    }
+    & .offcanvasBody{
+        padding-top: 0 !important;
+        border-bottom: 1px solid;
+        border-color: lighten($color: $black, $amount: 85);
+        & .sortRadioInput{
+            height: 20px;
+            width: 20px;
+            accent-color: $black;
+        }
+    }
+    & .offcanvasFooter{
+        padding: 16px;
+        & .clearBtn{
+            width: 100%;
+            height: 48px;
+            border-radius: 8px;
+            border: 1px solid;
+            border-color:  rgb(20, 110, 180);
+            background-color: white;
+            color: rgb(20, 110, 180) ;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        & .applyBtn{
+            background-color: rgb(20, 110, 180);
+            width: 100%;
+            height: 48px;
+            border-radius: 8px;
+            border: 1px solid;
+            border-color:  rgb(20, 110, 180);
+            color: $white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+.filterBtnOffcanvas{
+    width: 100%;
+    & .offcanvasHeader{
+        padding: 16px;
+        border-bottom: 1px solid;
+        border-color: lighten($color: $black, $amount: 90);
+        & .offcanvasTitle{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: lighten($color: $black, $amount: 30);
+        }
+        & .closeBtn{
+            background-color: white !important;
+            border: none;
+        }
+    }
+    & .offcanvasBody{
+        padding: 0;
+        & .categorySizebox{
+            // border-bottom: 1px solid $gray-300;
+                padding: 16px;
+            & .categorySizeHead{
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                color: $black;
+                margin-bottom: 10px;
+            }
+            & .categoryFormCheck{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                color: $black;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0 !important;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+                & .formInp{
+                    width: 20px;
+                    height: 20px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:focus{
+                        box-shadow: none;
+                        border: 1px solid $gray-500;
+                    }
+                    &:checked{
+                        background-color: $theme1 !important;
+                    }
+                }
+                & .formCheck{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    color: $black;
+                    padding-left: 15px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        & .divider{
+            width: 100%;
+            height: 1px;
+            background-color: $gray-300;
+        }
+        & .categoryPricebox{
+            padding: 16px;
+            // border-bottom: 1px solid $gray-300;
+            & .categorySizeHead{
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                color: $black;
+                margin-bottom: 10px;
+            }
+            & .categoryFormCheck{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                color: $black;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                &:hover{
+                    cursor: pointer;
+                }
+                & .formInp{
+                    width: 20px;
+                    height: 20px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:focus{
+                        box-shadow: none;
+                        border: 1px solid $gray-500;
+                    }
+                    &:checked{
+                        background-color: $theme1 !important;
+                    }
+                }
+                & .formCheck{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    color: $black;
+                    padding-left: 15px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    & .offcanvasFooter{
+        padding: 16px;
+        & .clearBtn{
+            width: 100%;
+            height: 48px;
+            border-radius: 8px;
+            border: 1px solid;
+            border-color:  rgb(20, 110, 180);
+            background-color: white;
+            color: rgb(20, 110, 180) ;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        & .applyBtn{
+            background-color: rgb(20, 110, 180);
+            width: 100%;
+            height: 48px;
+            border-radius: 8px;
+            border: 1px solid;
+            border-color:  rgb(20, 110, 180);
+            color: $white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+[data-bs-theme=dark] {
+    & [data-page-name=example] {
+        @include dark-media-breakpoint(basic) {
+            
+        }
+
+        // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+        @include dark-media-breakpoint-up(sm) {
+        }
+        @include dark-media-breakpoint-up(md) {
+        }
+        @include dark-media-breakpoint-up(lg) {
+        }
+        @include dark-media-breakpoint-up(xl) {
+        }
+        @include dark-media-breakpoint-up(xxl) {
+        }
+    
+    
+        @include dark-media-breakpoint-down(xxl) {
+        }
+        @include dark-media-breakpoint-down(xl) {
+        }
+        @include dark-media-breakpoint-down(lg) {
+        }
+        @include dark-media-breakpoint-down(md) {
+        }
+        @include dark-media-breakpoint-down(sm) {
+        }
+    }
+}
+
+// ! @@@@@@@@@@@@@@@@@@@@@@[  example start  ]@@@@@@@@@@@@@@@@@@@@@@
+

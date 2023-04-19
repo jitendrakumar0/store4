@@ -1,0 +1,165 @@
+
+// * @@@@@@@@@@@@@@@@@@@@@@[  Categories Page Start  ]@@@@@@@@@@@@@@@@@@@@@@
+[data-page-name=categoriesPage] {
+    @include media-breakpoint(basic) {
+        & .categoriesSection {
+            border-top: 1px solid $gray-300;
+            & .innerSection {
+                & .categorieCard {
+                    & .card-body {
+                        & .itemImg{
+                            & img {
+                                aspect-ratio: 5/5;
+                                object-fit: cover;
+                                object-position: center;
+                                width: 100%;
+                                border-radius: 8px;
+                                border: 1px solid $gray-100;
+                            }
+                        }
+                        & .itemTitle {
+                            color: $black;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+    @include media-breakpoint-up(sm) {}
+
+    @include media-breakpoint-up(md) {}
+
+    @include media-breakpoint-up(lg) {}
+
+    @include media-breakpoint-up(xl) {}
+
+    @include media-breakpoint-up(xxl) {}
+
+
+    @include media-breakpoint-down(xxl) {}
+
+    @include media-breakpoint-down(xl) {
+        & .categoriesSection {
+            & .innerSection {
+                & .categorieCard {
+                    & .card-body {
+                        & .itemImg{
+                            & img {
+                            }
+                        }
+                        & .itemTitle {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {}
+
+    @include media-breakpoint-down(md) {
+    }
+
+    @include media-breakpoint-down(sm) {
+    }
+}
+// ! @@@@@@@@@@@@@@@@@@@@@@[  Categories Page End  ]@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+
+
+
+
+
+
+
+
+// ? dark theme ***8
+
+[data-bs-theme=dark] {
+    & [data-page-name=example] {
+        @include dark-media-breakpoint(basic) {
+            
+        }
+
+        // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+        @include dark-media-breakpoint-up(sm) {
+        }
+        @include dark-media-breakpoint-up(md) {
+        }
+        @include dark-media-breakpoint-up(lg) {
+        }
+        @include dark-media-breakpoint-up(xl) {
+        }
+        @include dark-media-breakpoint-up(xxl) {
+        }
+    
+    
+        @include dark-media-breakpoint-down(xxl) {
+        }
+        @include dark-media-breakpoint-down(xl) {
+        }
+        @include dark-media-breakpoint-down(lg) {
+        }
+        @include dark-media-breakpoint-down(md) {
+        }
+        @include dark-media-breakpoint-down(sm) {
+        }
+    }
+}
+
+
+@include media-breakpoint(basic) {
+    .fotterFixed {
+        padding: 12px 16px;
+        border-top: 1px solid rgba($black, 0.2);
+        & .innerFooter {
+            & .fixedBtn {
+                font-weight: 500;
+                color: $gray-600;
+                transition: all 0.3s;
+                padding: 6px 16px;
+                font-size: 14px;
+                & .pageImage {
+                    height: 20px;
+                }
+                &.active {
+                    & .pageImg1 {
+                        display: none !important;
+                    }
+                    & .pageImg2 {
+                        display: flex !important;
+                    }
+                    color: $theme1 !important;
+                    background-color: rgba($theme1, 0.1);
+                }
+            }
+        }
+    }
+}
+
+// @include media-breakpoint-down(sm){
+//     .fotterFixed {
+//         padding: 10px 12px;
+//         & .innerFooter {
+//             & .fixedBtn {
+//                 padding: 4px 12px;
+//                 font-size: 12px;
+//                 & .pageImage {
+//                     height: 20px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+
