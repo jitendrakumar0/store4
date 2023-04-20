@@ -531,6 +531,21 @@
             color: $black;
             font-weight: 500;
         }
+        & .bgColour{
+            background-color: #F5F5F5;
+            padding: 12px 15px;
+            & .cartMainHeading3{
+                font-size: 14px;
+                font-weight: 400;
+                color: black;
+    
+            }
+            & .cartMainHeading4{
+                font-size: 14px;
+                font-weight: 500;
+                color: black;
+            }
+        }
         & .cartLeftPart{
             border: 1px solid $gray-300;
             border-radius: 6px;
@@ -585,8 +600,21 @@
                 font-size: 18px;
                 font-weight: 500;
             }
+            & .removeBtn1Border{
+                border-top: 1px solid $gray-300;
+                border-bottom: 12px solid #F5F5F5;
+                padding: 10px 0;
+                & .removeBtn1{
+                    background-color: transparent;
+                    color: #808080;
+                    border:none;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+
+            }
             & .select2{
-                width: 30% !important;
+                width: 100% !important;
                 margin-right: 10px;
                 & .select2-search {
                     & .select2-search--dropdown{
@@ -755,6 +783,26 @@
             }
 
         }
+        & .footerFluid{
+            border: none;
+            & .footerContainer{
+                & .footerdata{
+                    padding: 20px 0;
+                    & .paymentMethods{
+                        & img{
+        
+                        }
+                    }
+                    & .security{
+                        font-size: 14px;
+                        font-weight: 500;
+                        & img{
+        
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .footerFluid{
@@ -777,6 +825,28 @@
         }
     }
 }
+.fotterFixed{
+    & .fixedTxt{
+        font-size: 20px;
+        font-weight: 500;
+        & .fixedTxtAnchor{
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+    }
+    & .fixedBtn1{
+        border: none;
+        width: 100%;
+        background-color: #146EB4;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 12px 20px;
+        border-radius: 6px;
+    }
+}
 .topNavbar{
     & .navbarTopRow{
         & .logo{
@@ -793,13 +863,39 @@
             }
         }
         & .headerMiddleAnchor{
-            display: flex;
-            width: 100%;
+            padding-right: 50px;
+            &.active{
+                & span:first-child{
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    background-color: #146EB4;
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    margin-right: 4px;
+                }
+                & span:last-child{
+                    font-size: 14px;
+                    font-weight: 500;
+                    position: relative;
+                    color: #146EB4;
+                }
+            }
+            &:last-child{
+                padding-right: 0;
+                & span:last-child{
+
+                &::after{
+                display: none;
+                }
+                }
+            }
             & span:first-child{
                 width: 25px;
                 height: 25px;
                 border-radius: 50%;
-                background-color: #146EB4;
+                background-color: #808080;
                 display: block;
                 color: white;
                 text-align: center;
@@ -810,9 +906,6 @@
                 font-weight: 500;
                 position: relative;
                 color: #808080;
-                &.active{
-                color: #146EB4 ;
-                }
                 &::after{
                     content: '';
                     width: 43px;
@@ -825,12 +918,357 @@
                 }
             }
         }
+        & .navBtnBox{
+            & .navBtn{
+                &.activePill{
+                    background-color: lighten($color: #146eb4, $amount: 55);
+                    & .badgeClass{
+                        position: absolute;
+                        top: -1px;
+                        left: 0;
+                        background-color: red;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        color: white;
+                        font-size: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
     }
 }
-[data-bs-theme=dark] {
-    & [data-page-name=example] {
         @include dark-media-breakpoint(basic) {
-            
+            .topNavbar{
+                & .navbarTopRow{
+                    & .navBtnBox{
+                        & .navBtn{
+                            & .badgeHome{
+                                position: absolute;
+                                background-color: red;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                color: white !important;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                top: 0;
+                                left: -4px;
+                            }
+                        }
+                    }
+                }
+            }
+            .homePageFluid{
+                & .homePageContainer{
+                    & .homeTopBarCard{
+                        padding: 16px 0;
+                        & .homeTopCard{
+                            width: 100%;
+                            height: auto;
+                            overflow: hidden;
+                            border-radius: 6px !important;
+                            & img{
+                                border-radius: 6px !important;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                transition: 0.3s linear;
+                                &:hover{
+                                    transform: scale(1.04);
+                                    border-radius: 6px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .homePagEHeroFluid{
+                border-top: 1px solid #E6E6E6;
+                & .homePagEHeroContainer{
+                    & .foodVarietyListBox{
+                        padding-top: 24px;
+                        & .foodVarietyListBoxUl{
+                            list-style: none;
+                            & .foodVarietyListBoxLi{
+                                & .foodVarietyListBoxLAnchor{
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    line-height: 24px;
+                                    padding: 6px 8px 6px 0;
+                                    color: black !important;
+                                    display: block;
+                                    position: relative;
+                                    transition: 0.3s linear;
+                                    &:hover{
+                                        color: #146EB4 !important;
+                                    }
+                                    &.active{
+                                        color: #146EB4 !important;
+                                        background-image: linear-gradient(to right, white , #EEF5FA);
+                                        &::after{
+                                            content: "";
+                                            width: 4px;
+                                            height: 36px;
+                                            background-color: #146EB4;
+                                            position: absolute;
+                                            right: 0;
+                                            top: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .divider{
+                        border-left: 1px solid #E6E6E6;
+                        border-right: 1px solid #E6E6E6;
+                    }
+                    & .homeBagBox{
+                        padding: 24px 12px 24px 32px;
+                        & .bag{
+                            font-size: 20px;
+                            font-weight: 500;
+                            line-height: 25px;
+                            color: black;
+                            margin-right: 8px;
+                        }
+                        & .spanTxt{
+                            background-color: #146EB4;
+                            width: 30px;
+                            height: 25px;
+                            border-radius: 8px;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        & .bagAnchor{
+                            font-size: 14px;
+                            font-weight: 400;
+                            text-decoration: underline;
+                            color: black;
+                        }
+                        & .seat{
+                            color: black;
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 20px;
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                            & span{
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: black;
+                            }
+                        }
+                        & .price{
+                            & span:first-child{
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: black;
+                            }
+                            & span:last-child{
+                                font-size: 15px;
+                                font-weight: 400;
+                                color: gray;
+                                margin-left: 8px;
+                            }
+                        }
+                        & .addBtn{
+                            border: 1px solid #146EB4;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 24px;
+                            display: flex;
+                            align-items: center;
+                            padding: 0px 18px;
+                            border-radius: 5px;
+                            color: #146EB4;
+                            &:hover{
+                                background-color: lighten($color: #146EB4, $amount: 58);
+                            }
+                            & img{
+                                height: 12px;
+                                margin-left: 5px;
+                                background-color: white;
+                            }
+                        }
+                        & .total{
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: black;
+                        }
+                        & .totalAmount{
+                            font-size: 18px;
+                            font-weight: 500;   
+                            color: black;
+                        }
+                        & .gotoBtn{
+                            padding: 12px 20px;
+                            border-radius: 6px;
+                            border: none;
+                            color: white;
+                            font-size: 14px;
+                            font-weight: 500;
+                            background-color: #146EB4;
+                            width: 100%;
+                            margin-top: 20px;
+                            &:hover{
+                                background-color: lighten($color: #146EB4, $amount: 5);
+                            }
+                        }
+                    }
+                    & .homeCardBox{
+                        & .cardMainHeading{
+                            font-size: 20px;
+                            font-weight: 500;
+                            line-height: 24px;
+                            color: black;
+                            display: flex;
+                            padding: 24px 32px 8px;
+                            & span{
+                                background-color: #146EB4;
+                                width: 30px;
+                                height: 25px;
+                                border-radius: 8px;
+                                color: white;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-left: 15px;
+                                font-size: 14px;
+                                font-weight: 400;
+                            }
+                        }
+                        & .forBg{
+                            padding: 24px 32px 8px;
+                            // &:hover{
+                            //     background-color: #146eb4;
+                            // }
+                            & .homeFoodImage{
+                                width: 120px;
+                                overflow: hidden;
+                                border: 1px solid $gray-300;
+                                border-radius: 6px;
+                                & span{
+                                    background-color: #ee741f;
+                                    border-radius: 6px;
+                                    color: white;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    padding: 3px 10px;
+                                    position: absolute;
+                                    bottom: -15px;
+                                    left: 33px;
+                                }
+                                & img{
+                                    width: 120px;
+                                    height: 140px;
+                                    object-fit: contain;
+                                }
+                            }
+                            & .homeFoodName{
+                                font-size: 18px;
+                                font-weight: 500;
+                                line-height: 25px;
+                                color: black;
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 5px;
+                                & img{
+                                    margin-right: 8px;
+                                    color: black;
+                                }
+                            }
+                            & .para{
+                                font-size: 14px;
+                                font-weight: 400;
+                            }
+                            & .price{
+                                & span:first-child{
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    color: black;
+                                }
+                                & span:last-child{
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    color: gray;
+                                    margin-left: 8px;
+                                }
+                            }
+                            & .addBtn{
+                                border: 1px solid #146EB4;
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 24px;
+                                display: flex;
+                                align-items: center;
+                                padding: 0px 18px;
+                                border-radius: 5px;
+                                color: #146EB4 ;
+                                &:hover{
+                                    background-color: lighten($color: #146EB4, $amount: 58);
+                                }
+                                & img{
+                                    height: 12px;
+                                    margin-left: 5px;
+                                    background-color: white;
+                                }
+                            }
+                        }
+                    }
+                    & .allBtn{
+                        font-size: 15px;
+                        color: black;
+                        border: none;
+                        display: inline-block;
+                        background-color: #F2F2F2;
+                        padding: 8px 10px;
+                    }
+                }
+            }
+            .footerInner{
+                & .storeDetalis{
+                    color:lighten($color: black, $amount: 60);
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin-bottom: 8px;
+                }
+                & .pizza{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: white;
+                    margin-bottom: 8px;
+                }
+                & .address{
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: white;
+                    margin-bottom: 30px;
+                }
+                & .follow{
+                    font-size: 18px;
+                    font-weight: 400;
+                    color:lighten($color: black, $amount: 60);
+                    margin-bottom: 10px;
+                }
+                & .insta{
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: white;
+                    margin-bottom: 30px;
+                    & img{
+                        height: 20px;
+                        margin-right: 8px;
+                    }
+                }
+            }
         }
 
         // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
@@ -847,17 +1285,899 @@
     
     
         @include dark-media-breakpoint-down(xxl) {
+            .topNavbar{
+                & .navbarTopRow{
+                    & .logo{
+                        & img{
+            
+                        }
+                        & span{
+            
+                        }
+                    }
+                    & .menuBtn{
+                        & img{
+            
+                        }
+                    }
+                    & .headerMiddleAnchor{
+                        &:last-child{
+                            & span:last-child{
+            
+                            &::after{
+                            }
+                            }
+                        }
+                        & span:first-child{
+                        }
+                        & span:last-child{
+                            &.active{
+                            }
+                            &::after{
+                            }
+                        }
+                    }
+                }
+            }
+            .cartFluid{
+                & .cartContainer{
+                    & .cartMainHeading{
+                    }
+                    & .bgColour{
+                        & .cartMainHeading3{
+                
+                        }
+                        & .cartMainHeading4{
+                        }
+                    }
+                    & .cartLeftPart{
+                        & .dishImage{
+                            & img{
+                            }
+                        }
+                        & .dishName{
+                        }
+                        & .dishPrice{
+                            & span:first-child{
+                            }
+                            & span:last-child{
+                            }
+                        }
+                        & .savedMoney{
+                        }
+                        & .removeBtn{
+                        }
+                        & .select2{
+                            & .select2-search {
+                                & .select2-search--dropdown{
+                                    & .select2-search__field{
+                                    }
+                                }
+                            }
+                            &.select2-container--open{
+                                & .select2-selection__arrow{
+                                }
+                            }
+                            & .select2-selection__rendered{
+                            }
+                            & .select2-selection__arrow{
+                                & b{
+                                }
+                            }
+                            & .select2-search {
+                            }
+                        }
+                        & .selecttwo{
+                        }
+                    }
+                    & .cartrytPart{
+                        & .coupanAnchor{
+                            & .couponDetailParent{
+                                & .image{
+                                    & img{
+            
+                                    }
+                                }
+                                & .couponDetail{
+                                    & span:first-child{
+                                    }
+                                    & span:last-child{
+                                    }
+                                }
+                                & .applayBtn{
+                                    & img{
+                                    }
+                                }
+                            }
+                
+                        }
+                        & .couponData{
+                            & .totalItem{
+                            }
+                            & .price{
+                                & span{
+                                }
+                            }
+                            & .free{
+                            }
+                            & .grandTotal{
+                                & .grandTotalTxt{
+                                    & span{
+                                    }
+            
+                                }
+                                & .total{
+                                }
+                            }
+                            & .avarage{
+                                & span{
+                                }
+                            }
+                            & .saved{
+                                & .savedTxt{
+                                }
+                            }
+                            & .divider{
+                                & .bottomBtn{
+                                    &:hover{
+                                    }
+                                }
+                            }
+                        }
+            
+                    }
+                }
+            }
         }
         @include dark-media-breakpoint-down(xl) {
+            .topNavbar{
+                & .navbarTopRow{
+                    & .logo{
+                        & img{
+            
+                        }
+                        & span{
+                        font-size: 20px;
+                        }
+                    }
+                    & .menuBtn{
+                        & img{
+            
+                        }
+                    }
+                    & .headerMiddleAnchor{
+                        padding-right: 35px;
+                        &:last-child{
+                            & span:last-child{
+            
+                            &::after{
+                            }
+                            }
+                        }
+                        & span:first-child{
+                            margin-right: 4px;
+                            width: 20px;
+                            height: 20px;
+                            font-size: 12px;
+                        }
+                        & span:last-child{
+                            font-size: 13px;
+                            &.active{
+                            }
+                            &::after{
+                                content: '';
+                                width: 25px;
+                                position: absolute;
+                                right: -30px;
+                            }
+                        }
+                    }
+                    & .navBtnBox{
+                        & .navBtn{
+                            & .buttonAnchor{
+                                padding: 6px 6px;
+                                & img{
+                                    height: 20px;
+                                }
+                                & span{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .cartFluid{
+                & .cartContainer{
+                    & .cartMainHeading{
+                    }
+                    & .bgColour{
+                        & .cartMainHeading3{
+                
+                        }
+                        & .cartMainHeading4{
+                        }
+                    }
+                    & .cartLeftPart{
+                        & .dishImage{
+                            & img{
+                            }
+                        }
+                        & .dishName{
+                        }
+                        & .dishPrice{
+                            & span:first-child{
+                            }
+                            & span:last-child{
+                            }
+                        }
+                        & .savedMoney{
+                        }
+                        & .removeBtn{
+                        }
+                        & .select2{
+                            & .select2-search {
+                                & .select2-search--dropdown{
+                                    & .select2-search__field{
+                                    }
+                                }
+                            }
+                            &.select2-container--open{
+                                & .select2-selection__arrow{
+                                }
+                            }
+                            & .select2-selection__rendered{
+                            }
+                            & .select2-selection__arrow{
+                                & b{
+                                }
+                            }
+                            & .select2-search {
+                            }
+                        }
+                        & .selecttwo{
+                        }
+                    }
+                    & .cartrytPart{
+                        & .coupanAnchor{
+                            & .couponDetailParent{
+                                & .image{
+                                    & img{
+            
+                                    }
+                                }
+                                & .couponDetail{
+                                    & span:first-child{
+                                    }
+                                    & span:last-child{
+                                    }
+                                }
+                                & .applayBtn{
+                                    & img{
+                                    }
+                                }
+                            }
+                
+                        }
+                        & .couponData{
+                            & .totalItem{
+                            }
+                            & .price{
+                                & span{
+                                }
+                            }
+                            & .free{
+                            }
+                            & .grandTotal{
+                                & .grandTotalTxt{
+                                    & span{
+                                    }
+            
+                                }
+                                & .total{
+                                }
+                            }
+                            & .avarage{
+                                & span{
+                                }
+                            }
+                            & .saved{
+                                & .savedTxt{
+                                }
+                            }
+                            & .divider{
+                                & .bottomBtn{
+                                    &:hover{
+                                    }
+                                }
+                            }
+                        }
+            
+                    }
+                }
+            }
         }
         @include dark-media-breakpoint-down(lg) {
+            .topNavbar{
+                & .navbarTopRow{
+                    & .logo{
+                        & img{
+            
+                        }
+                        & span{
+            
+                        }
+                    }
+                    & .menuBtn{
+                        & img{
+            
+                        }
+                    }
+                    & .headerMiddleAnchor{
+                        &:last-child{
+                            & span:last-child{
+            
+                            &::after{
+                            }
+                            }
+                        }
+                        & span:first-child{
+                        }
+                        & span:last-child{
+                            &.active{
+                            }
+                            &::after{
+                            }
+                        }
+                    }
+                }
+            }
+            .cartFluid{
+                padding-bottom: 108px;
+                & .cartContainer{
+                    & .cartMainHeading{
+                    }
+                    & .bgColour{
+                        & .cartMainHeading3{
+                
+                        }
+                        & .cartMainHeading4{
+                        }
+                    }
+                    & .cartLeftPart{
+                        border: none;
+                        padding: 10px 10px 0 10px;
+                        & .dishImage{
+                            & img{
+                            }
+                        }
+                        & .dishName{
+                        }
+                        & .dishPrice{
+                            & span:first-child{
+                            }
+                            & span:last-child{
+                            }
+                        }
+                        & .savedMoney{
+                        }
+                        & .removeBtn{
+                        }
+                        & .select2{
+                            & .select2-search {
+                                & .select2-search--dropdown{
+                                    & .select2-search__field{
+                                    }
+                                }
+                            }
+                            &.select2-container--open{
+                                & .select2-selection__arrow{
+                                }
+                            }
+                            & .select2-selection__rendered{
+                            }
+                            & .select2-selection__arrow{
+                                & b{
+                                }
+                            }
+                            & .select2-search {
+                            }
+                        }
+                        & .selecttwo{
+                        }
+                    }
+                    & .cartrytPart{
+                        & .coupanAnchor{
+                            & .couponDetailParent{
+                                border: none;
+                                padding: 0;
+                                padding-bottom: 15px;
+                                border-bottom: 12px solid #F5F5F5;
+                                & .image{
+                                    & img{
+            
+                                    }
+                                }
+                                & .couponDetail{
+                                    & span:first-child{
+                                    }
+                                    & span:last-child{
+                                    }
+                                }
+                                & .applayBtn{
+                                    & img{
+                                    }
+                                }
+                            }
+                
+                        }
+                        & .couponData{
+                            border: none;
+                            padding-bottom: 0;
+                            & .totalItem{
+                            }
+                            & .price{
+                                & span{
+                                }
+                            }
+                            & .free{
+                            }
+                            & .grandTotal{
+                                & .grandTotalTxt{
+                                    & span{
+                                    }
+            
+                                }
+                                & .total{
+                                }
+                            }
+                            & .avarage{
+                                & span{
+                                }
+                            }
+                            & .saved{
+                                & .savedTxt{
+                                }
+                            }
+                            & .divider{
+                                & .bottomBtn{
+                                    &:hover{
+                                    }
+                                }
+                            }
+                        }
+                        & .footerFluid{
+                            border: none;
+                            & .footerContainer{
+                                & .footerdata{
+                                    padding: 20px;
+                                    border-top: 12px solid #F5F5F5;
+                                    border-bottom: 12px solid #F5F5F5;
+                                    margin-bottom: 50px;
+                                    & .paymentMethods{
+                                        & img{
+                                            padding: 3px;
+                                            height: 30px;
+                                            margin-bottom: 10px;
+                                        }
+                                    }
+                                    & .security{
+                                        font-size: 14px;
+                                        font-weight: 500;
+                                        margin-bottom: 10px;
+                                        color: black;
+                                        & img{
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .fotterFixed{
+                border-top: unset !important;
+                padding: 0 16px;
+                & .BorderFixed{
+                    border-top: 1px solid $gray-300;
+                    padding: 20px;
+                    & .fixedTxt{
+                        & .fixedTxtAnchor{
+                        }
+                    }
+                    & .fixedBtn1{
+                    }
+                }
+                & .innerFooter{
+                    & .fixedBtn{
+                        padding-top: 12px !important;
+                        padding-bottom: 0;
+                        & .badgeClass{
+                            position: absolute;
+                            top: 9px;
+                            left: 20px;
+                            background-color: red;
+                            font-size: 8px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            color: white;
+                        }
+                    }
+                }
+            }
         }
         @include dark-media-breakpoint-down(md) {
+            .topNavbar{
+                & .navbarTopRow{
+                    & .logo{
+                        & img{
+            
+                        }
+                        & span{
+            
+                        }
+                    }
+                    & .menuBtn{
+                        & img{
+            
+                        }
+                    }
+                    & .headerMiddleAnchor{
+                        &:last-child{
+                            & span:last-child{
+            
+                            &::after{
+                            }
+                            }
+                        }
+                        & span:first-child{
+                        }
+                        & span:last-child{
+                            &.active{
+                            }
+                            &::after{
+                            }
+                        }
+                    }
+                }
+            }
+            .cartFluid{
+                & .cartContainer{
+                    & .cartMainHeading{
+                    }
+                    & .bgColour{
+                        & .cartMainHeading3{
+                
+                        }
+                        & .cartMainHeading4{
+                        }
+                    }
+                    & .cartLeftPart{
+                        & .dishImage{
+                            & img{
+                            }
+                        }
+                        & .dishName{
+                        }
+                        & .dishPrice{
+                            & span:first-child{
+                            }
+                            & span:last-child{
+                            }
+                        }
+                        & .savedMoney{
+                        }
+                        & .removeBtn{
+                        }
+                        & .select2{
+                            & .select2-search {
+                                & .select2-search--dropdown{
+                                    & .select2-search__field{
+                                    }
+                                }
+                            }
+                            &.select2-container--open{
+                                & .select2-selection__arrow{
+                                }
+                            }
+                            & .select2-selection__rendered{
+                            }
+                            & .select2-selection__arrow{
+                                & b{
+                                }
+                            }
+                            & .select2-search {
+                            }
+                        }
+                        & .selecttwo{
+                        }
+                    }
+                    & .cartrytPart{
+                        & .coupanAnchor{
+                            & .couponDetailParent{
+                                & .image{
+                                    & img{
+            
+                                    }
+                                }
+                                & .couponDetail{
+                                    & span:first-child{
+                                    }
+                                    & span:last-child{
+                                    }
+                                }
+                                & .applayBtn{
+                                    & img{
+                                    }
+                                }
+                            }
+                
+                        }
+                        & .couponData{
+                            & .totalItem{
+                            }
+                            & .price{
+                                & span{
+                                }
+                            }
+                            & .free{
+                            }
+                            & .grandTotal{
+                                & .grandTotalTxt{
+                                    & span{
+                                    }
+            
+                                }
+                                & .total{
+                                }
+                            }
+                            & .avarage{
+                                & span{
+                                }
+                            }
+                            & .saved{
+                                & .savedTxt{
+                                }
+                            }
+                            & .divider{
+                                & .bottomBtn{
+                                    &:hover{
+                                    }
+                                }
+                            }
+                        }
+            
+                    }
+                }
+            }
+            .fotterFixed{
+                border-top: unset !important;
+                padding: 0 16px;
+                & .BorderFixed{
+                    border-top: 1px solid $gray-300;
+                    padding: 20px;
+                    & .fixedTxt{
+                        & .fixedTxtAnchor{
+                        }
+                    }
+                    & .fixedBtn1{
+                    }
+                }
+                & .innerFooter{
+                    & .fixedBtn{
+                        padding-top: 12px !important;
+                        padding-bottom: 0;
+                        & .badgeClass{
+                            position: absolute;
+                            top: 9px;
+                            left: 20px;
+                            background-color: red;
+                            font-size: 8px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            color: white;
+                        }
+                    }
+                }
+            }
         }
         @include dark-media-breakpoint-down(sm) {
+            .topNavbar{
+                & .navbarTopRow{
+                    & .logo{
+                        & img{
+            
+                        }
+                        & span{
+            
+                        }
+                    }
+                    & .menuBtn{
+                        & img{
+            
+                        }
+                    }
+                    & .headerMiddleAnchor{
+                        &:last-child{
+                            & span:last-child{
+            
+                            &::after{
+                            }
+                            }
+                        }
+                        & span:first-child{
+                        }
+                        & span:last-child{
+                            &.active{
+                            }
+                            &::after{
+                            }
+                        }
+                    }
+                }
+            }
+            .cartFluid{
+                & .cartContainer{
+                    & .cartMainHeading{
+                    }
+                    & .bgColour{
+                        & .cartMainHeading3{
+                
+                        }
+                        & .cartMainHeading4{
+                        }
+                    }
+                    & .cartLeftPart{
+                        & .dishImage{
+                            width: 100px;
+                            height: 120px;
+                            & img{
+                            }
+                        }
+                        & .dishName{
+                            font-size: 14px;
+                            line-height: 18px;
+                            margin-bottom: 3px;
+                        }
+                        & .dishPrice{
+                            margin-bottom: 4px;
+                            & span:first-child{
+                            }
+                            & span:last-child{
+                                font-size: 14px;
+                            }
+                        }
+                        & .savedMoney{
+                            font-size: 14px;
+                        }
+                        & .removeBtn{
+                        }
+                        & .select2{
+                            & .select2-search {
+                                & .select2-search--dropdown{
+                                    & .select2-search__field{
+                                    }
+                                }
+                            }
+                            &.select2-container--open{
+                                & .select2-selection__arrow{
+                                }
+                            }
+                            & .select2-selection__rendered{
+                            }
+                            & .select2-selection__arrow{
+                                & b{
+                                }
+                            }
+                            & .select2-search {
+                            }
+                        }
+                        & .selecttwo{
+                        }
+                    }
+                    & .cartrytPart{
+                        & .coupanAnchor{
+                            & .couponDetailParent{
+                                & .image{
+                                    & img{
+            
+                                    }
+                                }
+                                & .couponDetail{
+                                    & span:first-child{
+                                    }
+                                    & span:last-child{
+                                    }
+                                }
+                                & .applayBtn{
+                                    & img{
+                                    }
+                                }
+                            }
+                
+                        }
+                        & .couponData{
+                            padding: 12px 0;
+                            & .totalItem{
+                            }
+                            & .price{
+                                & span{
+                                }
+                            }
+                            & .free{
+                            }
+                            & .grandTotal{
+                                & .grandTotalTxt{
+                                    & span{
+                                    }
+            
+                                }
+                                & .total{
+                                }
+                            }
+                            & .avarage{
+                                & span{
+                                }
+                            }
+                            & .saved{
+                                & .savedTxt{
+                                }
+                            }
+                            & .divider{
+                                & .bottomBtn{
+                                    &:hover{
+                                    }
+                                }
+                            }
+                        }
+            
+                    }
+                }
+            }
+            .fotterFixed{
+                border-top: unset !important;
+                padding: 0 16px;
+                & .BorderFixed{
+                    border-top: 1px solid $gray-300;
+                    padding: 20px;
+                    & .fixedTxt{
+                        & .fixedTxtAnchor{
+                        }
+                    }
+                    & .fixedBtn1{
+                    }
+                }
+                & .innerFooter{
+                    & .fixedBtn{
+                        padding-top: 12px !important;
+                        padding-bottom: 0;
+                        & .badgeClass{
+                            position: absolute;
+                            top: 9px;
+                            left: 14px;
+                            background-color: red;
+                            font-size: 8px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            
         }
-    }
-}
 
 // ! @@@@@@@@@@@@@@@@@@@@@@[  example start  ]@@@@@@@@@@@@@@@@@@@@@@
 
