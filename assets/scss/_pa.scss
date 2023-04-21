@@ -766,6 +766,9 @@
                 & .homePageContainer{
                     & .homeTopBarCard{
                         padding: 16px 0;
+                        overflow: auto hidden;
+                        flex-wrap: nowrap;
+                        white-space: nowrap;
                         & .homeTopCard{
                             width: 100%;
                             height: auto;
@@ -931,6 +934,19 @@
                         }
                     }
                     & .homeCardBox{
+                        & .stickyClass{
+                            position: sticky;
+                            top: 80px;
+                            z-index: 99;
+                            background-color: white;
+                        }
+                        & .listClass{
+                            height: 100px;
+                            position: absolute;
+                            width: 100%;
+                            top: -100px;
+                            z-index: -9;
+                        }
                         & .cardMainHeading{
                             font-size: 20px;
                             font-weight: 500;
@@ -954,9 +970,9 @@
                         }
                         & .forBg{
                             padding: 24px 32px 8px;
-                            // &:hover{
-                            //     background-color: #146eb4;
-                            // }
+                            &:hover{
+                                background-color: #FAFAFA;
+                            }
                             & .homeFoodImage{
                                 width: 120px;
                                 overflow: hidden;
@@ -1040,6 +1056,15 @@
                     }
                 }
             }
+            .categoriesSection{
+                & .innerSection{
+                    & .homeBox{
+                        white-space: nowrap;
+                        flex-wrap: nowrap;
+                        overflow: auto hidden;
+                    }
+                }
+            }
             .footerInner{
                 & .storeDetalis{
                     color:lighten($color: black, $amount: 60);
@@ -1076,21 +1101,83 @@
                     }
                 }
                 & .stickyBtnParent{
-                    position: sticky;
-                    bottom: 100px;
+                    position: fixed;
+                    bottom: 90px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 999;
                     & .stickyBtn{
                         background-color: lighten($color: black, $amount: 40);
-                        width: 50px;
+                        width: 130px;
                         height: 50px;
-                        border-radius: 50%;
+                        border-radius: 50px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         margin: auto;
                         margin-bottom: 5px;
+                        transition: all 0.3s ease-in-out;
                         & img{
+                            margin-right: 5px;
                             height: 20px;
                             filter: brightness(5);
+                        }
+                        & .text {
+                            color: white;
+                            font-size: 14px;
+                        }
+                    }
+                    &.show {
+                        & .stickyBtn {
+                            width: 50px;
+                            & img {
+                                margin-right: 0;
+                            }
+                            & .text {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .modalDialog{
+                width: 400px;
+                & .modalContent{
+                    & .modalHeader{
+
+                    }
+                    & .modalBodyBox{
+                        & .modalBody{
+                            padding: 5px;
+                            & .modalBodyTxt{
+                                font-size: 15px;
+                                font-weight: 500;
+                                color: black;
+                            }
+                            & .spanBox{
+                                background-color: #999999;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 6px;
+                                color: white;
+                                font-size: 12px;
+                                font-weight: 500;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+                    }
+                    & .modalFooter{
+                        & .pp{
+                            & .ppAnchor{
+                                font-size: 14px;
+                                & img{
+                                    height: 12px;
+                                    margin-top: -5px;
+                                    margin-left: 5px;
+                                }
+                            }
                         }
                     }
                 }
@@ -1907,6 +1994,27 @@
                     }
                 }
             }
+            .footerInner{
+                padding-bottom: 90px;
+                & .storeDetalis{
+                }
+                & .pizza{
+                }
+                & .address{
+                }
+                & .follow{
+                }
+                & .insta{
+                    & img{
+                    }
+                }
+                & .stickyBtnParent{
+                    & .stickyBtn{
+                        & img{
+                        }
+                    }
+                }
+            }
         }
         @include dark-media-breakpoint-down(md) {
             .topNavbar{
@@ -2176,6 +2284,26 @@
                     }
                 }
             }
+            .footerInner{
+                & .storeDetalis{
+                }
+                & .pizza{
+                }
+                & .address{
+                }
+                & .follow{
+                }
+                & .insta{
+                    & img{
+                    }
+                }
+                & .stickyBtnParent{
+                    & .stickyBtn{
+                        & img{
+                        }
+                    }
+                }
+            }
         }
         @include dark-media-breakpoint-down(sm) {
             .topNavbar{
@@ -2420,6 +2548,7 @@
                     }
                     & .homeCardBox{
                         & .cardMainHeading{
+                            font-size: 19px;
                             & span{
                             }
                         }
@@ -2431,10 +2560,20 @@
                                 }
                             }
                             & .homeFoodName{
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 1;
+                                -webkit-box-orient: vertical;
                                 & img{
                                 }
                             }
                             & .para{
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 1;
+                                -webkit-box-orient: vertical;
                             }
                             & .price{
                                 & span:first-child{
@@ -2451,6 +2590,26 @@
                         }
                     }
                     & .allBtn{
+                    }
+                }
+            }
+            .footerInner{
+                & .storeDetalis{
+                }
+                & .pizza{
+                }
+                & .address{
+                }
+                & .follow{
+                }
+                & .insta{
+                    & img{
+                    }
+                }
+                & .stickyBtnParent{
+                    & .stickyBtn{
+                        & img{
+                        }
                     }
                 }
             }
