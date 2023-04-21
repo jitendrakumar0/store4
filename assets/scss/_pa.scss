@@ -962,6 +962,40 @@
                         }
                     }
                 }
+                & .logo1{
+                    display: flex;
+                    align-items: center;
+                    & img{
+                        max-width: 160px;
+                        width: auto;
+                        object-fit: contain;
+                        height: 52px;
+                        border-radius: 6px;
+                    }
+                    & span{
+                        font-size: 25px;
+                        margin-left: 15px;
+                        color: #000;
+                        font-weight: 500;
+                    }
+                }
+                & .searchInp{
+                    width: 100%;
+                    box-shadow: none;
+                    border-color: #F2F2F2;
+                    border-radius: 6px;
+                    height: 40px;
+                    background-color: #F2F2F2;
+                    color: #F2F2F2 !important;
+                    font-size: 15px;
+                    font-weight: 400;
+                    padding-left: 42px;
+                }
+                & .imgClass{
+                    position: absolute;
+                    left: 31px;
+                    top: 12px;
+                }
             }
             .homePageFluid{
                 & .homePageContainer{
@@ -990,34 +1024,38 @@
             .homePagEHeroFluid{
                 border-top: 1px solid #E6E6E6;
                 & .homePagEHeroContainer{
-                    & .foodVarietyListBox{
-                        padding-top: 24px;
-                        & .foodVarietyListBoxUl{
-                            list-style: none;
-                            & .foodVarietyListBoxLi{
-                                & .foodVarietyListBoxLAnchor{
-                                    font-size: 16px;
-                                    font-weight: 500;
-                                    line-height: 24px;
-                                    padding: 6px 8px 6px 0;
-                                    color: black !important;
-                                    display: block;
-                                    position: relative;
-                                    transition: 0.3s linear;
-                                    &:hover{
-                                        color: #146EB4 !important;
-                                    }
-                                    &.active{
-                                        color: #146EB4 !important;
-                                        background-image: linear-gradient(to right, white , #EEF5FA);
-                                        &::after{
-                                            content: "";
-                                            width: 4px;
-                                            height: 36px;
-                                            background-color: #146EB4;
-                                            position: absolute;
-                                            right: 0;
-                                            top: 0;
+                    & .POSITION{
+                        position: sticky;
+                        top: 100px;
+                        & .foodVarietyListBox{
+                            padding-top: 24px;
+                            & .foodVarietyListBoxUl{
+                                list-style: none;
+                                & .foodVarietyListBoxLi{
+                                    & .foodVarietyListBoxLAnchor{
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        line-height: 24px;
+                                        padding: 6px 8px 6px 0;
+                                        color: black !important;
+                                        display: block;
+                                        position: relative;
+                                        transition: 0.3s linear;
+                                        &:hover{
+                                            color: #146EB4 !important;
+                                        }
+                                        &.active{
+                                            color: #146EB4 !important;
+                                            background-image: linear-gradient(to right, white , #EEF5FA);
+                                            &::after{
+                                                content: "";
+                                                width: 4px;
+                                                height: 36px;
+                                                background-color: #146EB4;
+                                                position: absolute;
+                                                right: 0;
+                                                top: 0;
+                                            }
                                         }
                                     }
                                 }
@@ -1028,98 +1066,102 @@
                         border-left: 1px solid #E6E6E6;
                         border-right: 1px solid #E6E6E6;
                     }
-                    & .homeBagBox{
-                        padding: 24px 12px 24px 32px;
-                        & .bag{
-                            font-size: 20px;
-                            font-weight: 500;
-                            line-height: 25px;
-                            color: black;
-                            margin-right: 8px;
-                        }
-                        & .spanTxt{
-                            background-color: #146EB4;
-                            width: 30px;
-                            height: 25px;
-                            border-radius: 8px;
-                            color: white;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                        & .bagAnchor{
-                            font-size: 14px;
-                            font-weight: 400;
-                            text-decoration: underline;
-                            color: black;
-                        }
-                        & .seat{
-                            color: black;
-                            font-size: 14px;
-                            font-weight: 500;
-                            line-height: 20px;
-                            margin-top: 20px;
-                            margin-bottom: 20px;
-                            & span{
+                    & .POSITION{
+                        position: sticky;
+                        top: 100px;
+                        &.homeBagBox{
+                            padding: 24px 12px 24px 32px;
+                            & .bag{
+                                font-size: 20px;
+                                font-weight: 500;
+                                line-height: 25px;
+                                color: black;
+                                margin-right: 8px;
+                            }
+                            & .spanTxt{
+                                background-color: #146EB4;
+                                width: 30px;
+                                height: 25px;
+                                border-radius: 8px;
+                                color: white;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            & .bagAnchor{
                                 font-size: 14px;
                                 font-weight: 400;
+                                text-decoration: underline;
                                 color: black;
                             }
-                        }
-                        & .price{
-                            & span:first-child{
+                            & .seat{
+                                color: black;
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 20px;
+                                margin-top: 20px;
+                                margin-bottom: 20px;
+                                & span{
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: black;
+                                }
+                            }
+                            & .price{
+                                & span:first-child{
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    color: black;
+                                }
+                                & span:last-child{
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    color: gray;
+                                    margin-left: 8px;
+                                }
+                            }
+                            & .addBtn{
+                                border: 1px solid #146EB4;
                                 font-size: 16px;
+                                font-weight: 500;
+                                line-height: 24px;
+                                display: flex;
+                                align-items: center;
+                                padding: 0px 18px;
+                                border-radius: 5px;
+                                color: #146EB4;
+                                &:hover{
+                                    background-color: lighten($color: #146EB4, $amount: 58);
+                                }
+                                & img{
+                                    height: 12px;
+                                    margin-left: 5px;
+                                    background-color: white;
+                                }
+                            }
+                            & .total{
+                                font-size: 18px;
                                 font-weight: 500;
                                 color: black;
                             }
-                            & span:last-child{
-                                font-size: 15px;
-                                font-weight: 400;
-                                color: gray;
-                                margin-left: 8px;
+                            & .totalAmount{
+                                font-size: 18px;
+                                font-weight: 500;   
+                                color: black;
                             }
-                        }
-                        & .addBtn{
-                            border: 1px solid #146EB4;
-                            font-size: 16px;
-                            font-weight: 500;
-                            line-height: 24px;
-                            display: flex;
-                            align-items: center;
-                            padding: 0px 18px;
-                            border-radius: 5px;
-                            color: #146EB4;
-                            &:hover{
-                                background-color: lighten($color: #146EB4, $amount: 58);
-                            }
-                            & img{
-                                height: 12px;
-                                margin-left: 5px;
-                                background-color: white;
-                            }
-                        }
-                        & .total{
-                            font-size: 18px;
-                            font-weight: 500;
-                            color: black;
-                        }
-                        & .totalAmount{
-                            font-size: 18px;
-                            font-weight: 500;   
-                            color: black;
-                        }
-                        & .gotoBtn{
-                            padding: 12px 20px;
-                            border-radius: 6px;
-                            border: none;
-                            color: white;
-                            font-size: 14px;
-                            font-weight: 500;
-                            background-color: #146EB4;
-                            width: 100%;
-                            margin-top: 20px;
-                            &:hover{
-                                background-color: lighten($color: #146EB4, $amount: 5);
+                            & .gotoBtn{
+                                padding: 12px 20px;
+                                border-radius: 6px;
+                                border: none;
+                                color: white;
+                                font-size: 14px;
+                                font-weight: 500;
+                                background-color: #146EB4;
+                                width: 100%;
+                                margin-top: 20px;
+                                &:hover{
+                                    background-color: lighten($color: #146EB4, $amount: 5);
+                                }
                             }
                         }
                     }
@@ -1266,6 +1308,25 @@
                     & img{
                         height: 20px;
                         margin-right: 8px;
+                    }
+                }
+                & .stickyBtnParent{
+                    position: sticky;
+                    bottom: 100px;
+                    & .stickyBtn{
+                        background-color: lighten($color: black, $amount: 40);
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: auto;
+                        margin-bottom: 5px;
+                        & img{
+                            height: 20px;
+                            filter: brightness(5);
+                        }
                     }
                 }
             }
@@ -1425,6 +1486,98 @@
                             }
                         }
             
+                    }
+                }
+            }
+            .homePagEHeroFluid{
+                & .homePagEHeroContainer{
+                    & .POSITION{
+                        & .foodVarietyListBox{
+                            & .foodVarietyListBoxUl{
+                                & .foodVarietyListBoxLi{
+                                    & .foodVarietyListBoxLAnchor{
+                                        &:hover{
+                                        }
+                                        &.active{
+                                            &::after{
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .divider{
+                        border-left: unset;
+                        border-right: unset;
+                    }
+                    & .POSITION{
+                        &.homeBagBox{
+                            & .bag{
+                            }
+                            & .spanTxt{
+                            }
+                            & .bagAnchor{
+                            }
+                            & .seat{
+                                & span{
+                                }
+                            }
+                            & .price{
+                                & span:first-child{
+                                }
+                                & span:last-child{
+                                }
+                            }
+                            & .addBtn{
+                                &:hover{
+                                }
+                                & img{
+                                }
+                            }
+                            & .total{
+                            }
+                            & .totalAmount{
+                            }
+                            & .gotoBtn{
+                                &:hover{
+                                }
+                            }
+                        }
+                    }
+                    & .homeCardBox{
+                        & .cardMainHeading{
+                            & span{
+                            }
+                        }
+                        & .forBg{
+                            & .homeFoodImage{
+                                & span{
+                                }
+                                & img{
+                                }
+                            }
+                            & .homeFoodName{
+                                & img{
+                                }
+                            }
+                            & .para{
+                            }
+                            & .price{
+                                & span:first-child{
+                                }
+                                & span:last-child{
+                                }
+                            }
+                            & .addBtn{
+                                &:hover{
+                                }
+                                & img{
+                                }
+                            }
+                        }
+                    }
+                    & .allBtn{
                     }
                 }
             }
@@ -1593,6 +1746,96 @@
                             }
                         }
             
+                    }
+                }
+            }
+            .homePagEHeroFluid{
+                & .homePagEHeroContainer{
+                    & .POSITION{
+                        & .foodVarietyListBox{
+                            & .foodVarietyListBoxUl{
+                                & .foodVarietyListBoxLi{
+                                    & .foodVarietyListBoxLAnchor{
+                                        &:hover{
+                                        }
+                                        &.active{
+                                            &::after{
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .divider{
+                    }
+                    & .POSITION{
+                        &.homeBagBox{
+                            & .bag{
+                            }
+                            & .spanTxt{
+                            }
+                            & .bagAnchor{
+                            }
+                            & .seat{
+                                & span{
+                                }
+                            }
+                            & .price{
+                                & span:first-child{
+                                }
+                                & span:last-child{
+                                }
+                            }
+                            & .addBtn{
+                                &:hover{
+                                }
+                                & img{
+                                }
+                            }
+                            & .total{
+                            }
+                            & .totalAmount{
+                            }
+                            & .gotoBtn{
+                                &:hover{
+                                }
+                            }
+                        }
+                    }
+                    & .homeCardBox{
+                        & .cardMainHeading{
+                            & span{
+                            }
+                        }
+                        & .forBg{
+                            & .homeFoodImage{
+                                & span{
+                                }
+                                & img{
+                                }
+                            }
+                            & .homeFoodName{
+                                & img{
+                                }
+                            }
+                            & .para{
+                            }
+                            & .price{
+                                & span:first-child{
+                                }
+                                & span:last-child{
+                                }
+                            }
+                            & .addBtn{
+                                &:hover{
+                                }
+                                & img{
+                                }
+                            }
+                        }
+                    }
+                    & .allBtn{
                     }
                 }
             }
@@ -1809,6 +2052,96 @@
                     }
                 }
             }
+            .homePagEHeroFluid{
+                & .homePagEHeroContainer{
+                    & .POSITION{
+                        & .foodVarietyListBox{
+                            & .foodVarietyListBoxUl{
+                                & .foodVarietyListBoxLi{
+                                    & .foodVarietyListBoxLAnchor{
+                                        &:hover{
+                                        }
+                                        &.active{
+                                            &::after{
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .divider{
+                    }
+                    & .POSITION{
+                        &.homeBagBox{
+                            & .bag{
+                            }
+                            & .spanTxt{
+                            }
+                            & .bagAnchor{
+                            }
+                            & .seat{
+                                & span{
+                                }
+                            }
+                            & .price{
+                                & span:first-child{
+                                }
+                                & span:last-child{
+                                }
+                            }
+                            & .addBtn{
+                                &:hover{
+                                }
+                                & img{
+                                }
+                            }
+                            & .total{
+                            }
+                            & .totalAmount{
+                            }
+                            & .gotoBtn{
+                                &:hover{
+                                }
+                            }
+                        }
+                    }
+                    & .homeCardBox{
+                        & .cardMainHeading{
+                            & span{
+                            }
+                        }
+                        & .forBg{
+                            & .homeFoodImage{
+                                & span{
+                                }
+                                & img{
+                                }
+                            }
+                            & .homeFoodName{
+                                & img{
+                                }
+                            }
+                            & .para{
+                            }
+                            & .price{
+                                & span:first-child{
+                                }
+                                & span:last-child{
+                                }
+                            }
+                            & .addBtn{
+                                &:hover{
+                                }
+                                & img{
+                                }
+                            }
+                        }
+                    }
+                    & .allBtn{
+                    }
+                }
+            }
         }
         @include dark-media-breakpoint-down(md) {
             .topNavbar{
@@ -1985,6 +2318,96 @@
                             border-radius: 50%;
                             color: white;
                         }
+                    }
+                }
+            }
+            .homePagEHeroFluid{
+                & .homePagEHeroContainer{
+                    & .POSITION{
+                        & .foodVarietyListBox{
+                            & .foodVarietyListBoxUl{
+                                & .foodVarietyListBoxLi{
+                                    & .foodVarietyListBoxLAnchor{
+                                        &:hover{
+                                        }
+                                        &.active{
+                                            &::after{
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .divider{
+                    }
+                    & .POSITION{
+                        &.homeBagBox{
+                            & .bag{
+                            }
+                            & .spanTxt{
+                            }
+                            & .bagAnchor{
+                            }
+                            & .seat{
+                                & span{
+                                }
+                            }
+                            & .price{
+                                & span:first-child{
+                                }
+                                & span:last-child{
+                                }
+                            }
+                            & .addBtn{
+                                &:hover{
+                                }
+                                & img{
+                                }
+                            }
+                            & .total{
+                            }
+                            & .totalAmount{
+                            }
+                            & .gotoBtn{
+                                &:hover{
+                                }
+                            }
+                        }
+                    }
+                    & .homeCardBox{
+                        & .cardMainHeading{
+                            & span{
+                            }
+                        }
+                        & .forBg{
+                            & .homeFoodImage{
+                                & span{
+                                }
+                                & img{
+                                }
+                            }
+                            & .homeFoodName{
+                                & img{
+                                }
+                            }
+                            & .para{
+                            }
+                            & .price{
+                                & span:first-child{
+                                }
+                                & span:last-child{
+                                }
+                            }
+                            & .addBtn{
+                                &:hover{
+                                }
+                                & img{
+                                }
+                            }
+                        }
+                    }
+                    & .allBtn{
                     }
                 }
             }
@@ -2176,7 +2599,96 @@
                     }
                 }
             }
-            
+            .homePagEHeroFluid{
+                & .homePagEHeroContainer{
+                    & .POSITION{
+                        & .foodVarietyListBox{
+                            & .foodVarietyListBoxUl{
+                                & .foodVarietyListBoxLi{
+                                    & .foodVarietyListBoxLAnchor{
+                                        &:hover{
+                                        }
+                                        &.active{
+                                            &::after{
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & .divider{
+                    }
+                    & .POSITION{
+                        &.homeBagBox{
+                            & .bag{
+                            }
+                            & .spanTxt{
+                            }
+                            & .bagAnchor{
+                            }
+                            & .seat{
+                                & span{
+                                }
+                            }
+                            & .price{
+                                & span:first-child{
+                                }
+                                & span:last-child{
+                                }
+                            }
+                            & .addBtn{
+                                &:hover{
+                                }
+                                & img{
+                                }
+                            }
+                            & .total{
+                            }
+                            & .totalAmount{
+                            }
+                            & .gotoBtn{
+                                &:hover{
+                                }
+                            }
+                        }
+                    }
+                    & .homeCardBox{
+                        & .cardMainHeading{
+                            & span{
+                            }
+                        }
+                        & .forBg{
+                            & .homeFoodImage{
+                                & span{
+                                }
+                                & img{
+                                }
+                            }
+                            & .homeFoodName{
+                                & img{
+                                }
+                            }
+                            & .para{
+                            }
+                            & .price{
+                                & span:first-child{
+                                }
+                                & span:last-child{
+                                }
+                            }
+                            & .addBtn{
+                                &:hover{
+                                }
+                                & img{
+                                }
+                            }
+                        }
+                    }
+                    & .allBtn{
+                    }
+                }
+            }
         }
 
 // ! @@@@@@@@@@@@@@@@@@@@@@[  example start  ]@@@@@@@@@@@@@@@@@@@@@@

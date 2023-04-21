@@ -1947,6 +1947,40 @@ nav .breadcrumb .breadcrumb-item a:hover {
   top: 0;
   left: -4px;
 }
+.topNavbar .logo1 {
+  display: flex;
+  align-items: center;
+}
+.topNavbar .logo1 img {
+  max-width: 160px;
+  width: auto;
+  object-fit: contain;
+  height: 52px;
+  border-radius: 6px;
+}
+.topNavbar .logo1 span {
+  font-size: 25px;
+  margin-left: 15px;
+  color: #000;
+  font-weight: 500;
+}
+.topNavbar .searchInp {
+  width: 100%;
+  box-shadow: none;
+  border-color: #F2F2F2;
+  border-radius: 6px;
+  height: 40px;
+  background-color: #F2F2F2;
+  color: #F2F2F2 !important;
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 42px;
+}
+.topNavbar .imgClass {
+  position: absolute;
+  left: 31px;
+  top: 12px;
+}
 
 .homePageFluid .homePageContainer .homeTopBarCard {
   padding: 16px 0;
@@ -1972,13 +2006,17 @@ nav .breadcrumb .breadcrumb-item a:hover {
 .homePagEHeroFluid {
   border-top: 1px solid #E6E6E6;
 }
-.homePagEHeroFluid .homePagEHeroContainer .foodVarietyListBox {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION {
+  position: sticky;
+  top: 100px;
+}
+.homePagEHeroFluid .homePagEHeroContainer .POSITION .foodVarietyListBox {
   padding-top: 24px;
 }
-.homePagEHeroFluid .homePagEHeroContainer .foodVarietyListBox .foodVarietyListBoxUl {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION .foodVarietyListBox .foodVarietyListBoxUl {
   list-style: none;
 }
-.homePagEHeroFluid .homePagEHeroContainer .foodVarietyListBox .foodVarietyListBoxUl .foodVarietyListBoxLi .foodVarietyListBoxLAnchor {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION .foodVarietyListBox .foodVarietyListBoxUl .foodVarietyListBoxLi .foodVarietyListBoxLAnchor {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -1988,14 +2026,14 @@ nav .breadcrumb .breadcrumb-item a:hover {
   position: relative;
   transition: 0.3s linear;
 }
-.homePagEHeroFluid .homePagEHeroContainer .foodVarietyListBox .foodVarietyListBoxUl .foodVarietyListBoxLi .foodVarietyListBoxLAnchor:hover {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION .foodVarietyListBox .foodVarietyListBoxUl .foodVarietyListBoxLi .foodVarietyListBoxLAnchor:hover {
   color: #146EB4 !important;
 }
-.homePagEHeroFluid .homePagEHeroContainer .foodVarietyListBox .foodVarietyListBoxUl .foodVarietyListBoxLi .foodVarietyListBoxLAnchor.active {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION .foodVarietyListBox .foodVarietyListBoxUl .foodVarietyListBoxLi .foodVarietyListBoxLAnchor.active {
   color: #146EB4 !important;
   background-image: linear-gradient(to right, white, #EEF5FA);
 }
-.homePagEHeroFluid .homePagEHeroContainer .foodVarietyListBox .foodVarietyListBoxUl .foodVarietyListBoxLi .foodVarietyListBoxLAnchor.active::after {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION .foodVarietyListBox .foodVarietyListBoxUl .foodVarietyListBoxLi .foodVarietyListBoxLAnchor.active::after {
   content: "";
   width: 4px;
   height: 36px;
@@ -2008,17 +2046,21 @@ nav .breadcrumb .breadcrumb-item a:hover {
   border-left: 1px solid #E6E6E6;
   border-right: 1px solid #E6E6E6;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION {
+  position: sticky;
+  top: 100px;
+}
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox {
   padding: 24px 12px 24px 32px;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .bag {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .bag {
   font-size: 20px;
   font-weight: 500;
   line-height: 25px;
   color: black;
   margin-right: 8px;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .spanTxt {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .spanTxt {
   background-color: #146EB4;
   width: 30px;
   height: 25px;
@@ -2028,13 +2070,13 @@ nav .breadcrumb .breadcrumb-item a:hover {
   align-items: center;
   justify-content: center;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .bagAnchor {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .bagAnchor {
   font-size: 14px;
   font-weight: 400;
   text-decoration: underline;
   color: black;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .seat {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .seat {
   color: black;
   font-size: 14px;
   font-weight: 500;
@@ -2042,23 +2084,23 @@ nav .breadcrumb .breadcrumb-item a:hover {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .seat span {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .seat span {
   font-size: 14px;
   font-weight: 400;
   color: black;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .price span:first-child {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .price span:first-child {
   font-size: 16px;
   font-weight: 500;
   color: black;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .price span:last-child {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .price span:last-child {
   font-size: 15px;
   font-weight: 400;
   color: gray;
   margin-left: 8px;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .addBtn {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .addBtn {
   border: 1px solid #146EB4;
   font-size: 16px;
   font-weight: 500;
@@ -2069,25 +2111,25 @@ nav .breadcrumb .breadcrumb-item a:hover {
   border-radius: 5px;
   color: #146EB4;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .addBtn:hover {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .addBtn:hover {
   background-color: #f2f9fe;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .addBtn img {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .addBtn img {
   height: 12px;
   margin-left: 5px;
   background-color: white;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .total {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .total {
   font-size: 18px;
   font-weight: 500;
   color: black;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .totalAmount {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .totalAmount {
   font-size: 18px;
   font-weight: 500;
   color: black;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .gotoBtn {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .gotoBtn {
   padding: 12px 20px;
   border-radius: 6px;
   border: none;
@@ -2098,7 +2140,7 @@ nav .breadcrumb .breadcrumb-item a:hover {
   width: 100%;
   margin-top: 20px;
 }
-.homePagEHeroFluid .homePagEHeroContainer .homeBagBox .gotoBtn:hover {
+.homePagEHeroFluid .homePagEHeroContainer .POSITION.homeBagBox .gotoBtn:hover {
   background-color: #177ccb;
 }
 .homePagEHeroFluid .homePagEHeroContainer .homeCardBox .cardMainHeading {
@@ -2237,7 +2279,32 @@ nav .breadcrumb .breadcrumb-item a:hover {
   height: 20px;
   margin-right: 8px;
 }
+.footerInner .stickyBtnParent {
+  position: sticky;
+  bottom: 100px;
+}
+.footerInner .stickyBtnParent .stickyBtn {
+  background-color: #666666;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 5px;
+}
+.footerInner .stickyBtnParent .stickyBtn img {
+  height: 20px;
+  filter: brightness(5);
+}
 
+@media (max-width: 1399.98px) {
+  .homePagEHeroFluid .homePagEHeroContainer .divider {
+    border-left: unset;
+    border-right: unset;
+  }
+}
 @media (max-width: 1199.98px) {
   .topNavbar .navbarTopRow .logo span {
     font-size: 20px;
