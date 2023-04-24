@@ -96,10 +96,10 @@
 
         <!-- style -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="assets/libs/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="assets/libs/owl.carousel/dist/assets/owl.carousel.min.css" />
         <link rel="stylesheet" href="assets/css/style.min.css" />
 
-        <script src="assets/libs/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="assets/libs/jquery/jquery.min.js"></script>
     </head>
     <body>
         <main class="container-fluid">
@@ -194,16 +194,28 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-auto d-lg-none">
-                                    <ul class="m-0 p-0 list-unstyled mobMenuLinks d-flex align-items-center">
-                                        <li class="mobMenuItem"><a class="mobMenuLink" href="javascript:;"><img src="./assets/img/svg/searchDark.svg" alt="search icon"></a></li>
-                                        <li class="mobMenuItem px-3"><a class="mobMenuLink" href="javascript:;"><img src="./assets/img/svg/categoryIcon.svg" alt="category icon"></a></li>
-                                        <li class="mobMenuItem"><a class="mobMenuLink" href="javascript:;"><img src="./assets/img/svg/bagIcon.svg" alt="bag icon"></a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </navbar>
+                    
+                    <div class="container-fluid categoryFilterBtns d-block d-lg-none p-0 bg-white">  
+                        <div class="container categoryFiltercontainer">
+                            <div class="row align-items-center justify-content-center forPadding mx-0">
+                                <div class="col-6 px-0">
+                                    <button class="sortBtn d-flex align-items-center justify-content-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                        <img src="assets/img/svg/sort.svg" alt="" srcset="">
+                                        <div class="btnName text-center">Sort</div>
+                                    </button>
+                                </div>
+                                <div class="col-6 px-0">
+                                    <button class="filterBtn d-flex align-items-center justify-content-center"data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling1" aria-controls="offcanvasScrolling">
+                                        <img src="assets/img/svg/filter.svg" alt="" srcset="">
+                                        <div class="btnName text-center">Filter</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="container-fluid categoryContainerFluid">
                         <div class="container categoryContainer">
                             <div class="row">
@@ -535,7 +547,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid categoryFilterBtns d-block d-lg-none p-0 sticky-bottom bg-white">  
+                    <div class="container-fluid categoryFilterBtns d-block d-lg-none p-0 bg-white">  
                         <div class="container categoryFiltercontainer mt-5">
                             <div class="row align-items-center justify-content-center forPadding mx-0">
                                 <div class="col-6 px-0">
@@ -587,67 +599,39 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <div class="col-12 followSocials">
-                                    <div class="row">
-                                        <div class="col-12 followUsHeading">FOLLOW US</div>
-                                        <div class="col-12">
-                                            <div class="row socials justify-content-center">
-                                                <div class="col-auto social">
-                                                    <a href="javascript:;">
-                                                        <span>
-                                                            <img src="assets/img/svg/facebook.svg" alt="">
-                                                        </span>
-                                                        <span>Facebook</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-auto social">
-                                                    <a href="javascript:;">
-                                                        <span>
-                                                            <img src="assets/img/svg/twitter.svg" alt="">
-                                                        </span>
-                                                        <span>Twitter</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-auto social">
-                                                    <a href="javascript:;">
-                                                        <span>
-                                                            <img src="assets/img/svg/pinterest.svg" alt="">
-                                                        </span>
-                                                        <span>Pinterest</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-auto social">
-                                                    <a href="javascript:;">
-                                                        <span>
-                                                            <img src="assets/img/svg/youtube.svg" alt="">
-                                                        </span>
-                                                        <span>Youtube</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-auto social">
-                                                    <a href="javascript:;">
-                                                        <span>
-                                                            <img src="assets/img/svg/instagram.svg" alt="">
-                                                        </span>
-                                                        <span>Instagram</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col-auto social">
-                                                    <a href="javascript:;">
-                                                        <span>
-                                                            <img src="assets/img/svg/linkedin.svg" alt="">
-                                                        </span>
-                                                        <span>Linkedin</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                    <div class="storeDetalis">STORE DETAILS</div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                    <div class="pizza">Pizza Heist</div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                    <div class="address">
+                                        Pukhrayan Kanpur Dehat Uttar Pradesh
                                     </div>
                                 </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                    <div class="follow">
+                                        FOLLOW US
+                                    </div>
+                                </div>
+                                <a href="javascript:;" class="col-12 d-flex justify-content-center align-items-center">
+                                    <div class="insta d-flex justify-content-center align-items-center">
+                                        <img src="assets/img/svg/instagram.svg" alt="">Instagram
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </footer> 
+                    <div class="container-fluid bg-white fixed-bottom fotterFixed d-lg-none">
+                        <div class="container">
+                        </div>
+                        <div class="row justify-content-center align-items-center innerFooter gx-sm-3 gx-2 border-top pt-3">
+                            <div class="col-auto"><a href="javascript:;" class="d-flex fixedBtn active align-items-center gap-sm-2 gap-1 rounded-pill"><div class="pageImg1 pageImage d-flex d-none"><img src="assets/img/svg/home.svg" alt="" class="h-100"></div><div class="pageImg2 pageImage"><img src="assets/img/svg/homefill_icon.svg" alt="" class="h-100"></div> Home</a></div>
+                            <div class="col-auto position-relative"><a href="javascript:;" class="d-flex fixedBtn rounded-pill align-items-center gap-sm-2 gap-1"><div class="pageImg1 pageImage"><img src="assets/img/svg/bagIcon.svg" alt="" class="h-100"></div><div class="pageImg2 pageImage d-flex d-none"><img src="assets/img/svg/bagIcoActive.svg" alt="" class="h-100"></div><span class="badgeClass">1</span> Bag</a></div>
+                            <div class="col-auto"><a href="javascript:;" class="d-flex fixedBtn rounded-pill align-items-center gap-sm-2 gap-1"><div class="pageImg1 pageImage d-flex"><img src="assets/img/svg/accountIcon.svg" alt="" class="h-100"></div><div class="pageImg2 pageImage d-none"><img src="assets/img/svg/accountActive.svg" alt="" class="h-100"></div> Account</a></div>
+                        </div>
+                    </div>
                 </div>   
             </div>
         </main>
@@ -772,8 +756,8 @@
                 </div> 
             </div>
             </div>
-        <script src="assets/libs/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+        <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/owl.carousel/dist/owl.carousel.min.js"></script>
         <script type="module" src="assets/js/main.min.js"></script>
     </body>
 </html>

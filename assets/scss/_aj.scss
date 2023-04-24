@@ -403,6 +403,7 @@
     @include media-breakpoint-down(lg) {
         .categoryContainerFluid{
             & .categoryContainer{
+                padding-top: 30px;
                 & .categoryBreadcrumb{
                     & .categoryBreadcrumbul{
                         & .categorybreadcrumbli{
@@ -564,14 +565,14 @@
 
 @include media-breakpoint(basic) {
     .fotterFixed {
-        padding: 12px 16px;
+        padding: 0px 16px 12px 0;
         border-top: 1px solid rgba($black, 0.2);
         & .innerFooter {
             & .fixedBtn {
                 font-weight: 500;
                 color: $gray-600;
                 transition: all 0.3s;
-                padding: 6px 16px;
+                padding: 8px 16px;
                 font-size: 14px;
                 & .pageImage {
                     height: 20px;

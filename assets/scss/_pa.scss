@@ -6,8 +6,8 @@
         & .categoryFilterBtns{
             height: 46px;
             & .categoryFiltercontainer{
-                border-top: 1px solid;
-                border-color: lighten($color: $black, $amount: 85);
+                border-bottom: 1px solid;
+                border-color: #e9ecef;
                 & .forPadding{
                     width: 100%;
                     height: 46px;
@@ -953,7 +953,7 @@
                             line-height: 24px;
                             color: black;
                             display: flex;
-                            padding: 24px 32px 8px;
+                            // padding: 24px 32px 8px;
                             & span{
                                 background-color: #146EB4;
                                 width: 30px;
@@ -969,12 +969,13 @@
                             }
                         }
                         & .forBg{
-                            padding: 24px 32px 8px;
+                            // padding: 24px 32px 8px;
                             &:hover{
                                 background-color: #FAFAFA;
                             }
                             & .homeFoodImage{
                                 width: 120px;
+                                height: 120px;
                                 overflow: hidden;
                                 border: 1px solid $gray-300;
                                 border-radius: 6px;
@@ -990,8 +991,8 @@
                                     left: 33px;
                                 }
                                 & img{
-                                    width: 120px;
-                                    height: 140px;
+                                    width: 100%;
+                                    height: 100%;
                                     object-fit: contain;
                                 }
                             }
@@ -1005,6 +1006,7 @@
                                 margin-bottom: 5px;
                                 & img{
                                     margin-right: 8px;
+                                    margin-bottom: 3px;
                                     color: black;
                                 }
                             }
@@ -1059,7 +1061,7 @@
             .categoriesSection{
                 & .innerSection{
                     & .homeBox{
-                        white-space: nowrap;
+                        // white-space: nowrap;
                         flex-wrap: nowrap;
                         overflow: auto hidden;
                     }
@@ -1142,6 +1144,7 @@
             }
             .modalDialog{
                 width: 400px;
+                margin-inline: auto;
                 & .modalContent{
                     & .modalHeader{
 
@@ -1885,8 +1888,8 @@
                 }
                 & .innerFooter{
                     & .fixedBtn{
-                        padding-top: 12px !important;
-                        padding-bottom: 0;
+                        // padding-top: 12px !important;
+                        // padding-bottom: 0;
                         & .badgeClass{
                             position: absolute;
                             top: 9px;
@@ -2175,8 +2178,8 @@
                 }
                 & .innerFooter{
                     & .fixedBtn{
-                        padding-top: 12px !important;
-                        padding-bottom: 0;
+                        // padding-top: 12px !important;
+                        // padding-bottom: 0;
                         & .badgeClass{
                             position: absolute;
                             top: 9px;
@@ -2352,6 +2355,7 @@
                         }
                     }
                     & .cartLeftPart{
+                        padding: 0 !important;
                         & .dishImage{
                             width: 100px;
                             height: 120px;
@@ -2473,8 +2477,8 @@
                 }
                 & .innerFooter{
                     & .fixedBtn{
-                        padding-top: 12px !important;
-                        padding-bottom: 0;
+                        // padding-top: 12px !important;
+                        // padding-bottom: 0;
                         & .badgeClass{
                             position: absolute;
                             top: 9px;
@@ -2565,6 +2569,7 @@
                                 display: -webkit-box;
                                 -webkit-line-clamp: 1;
                                 -webkit-box-orient: vertical;
+                                font-size: 16px;
                                 & img{
                                 }
                             }
@@ -2590,6 +2595,7 @@
                         }
                     }
                     & .allBtn{
+                        font-size: 12px;
                     }
                 }
             }
@@ -2609,6 +2615,31 @@
                 & .stickyBtnParent{
                     & .stickyBtn{
                         & img{
+                        }
+                    }
+                }
+            }
+            .modalDialog{
+                width: 95%;
+                max-width: 400px;
+                & .modalContent{
+                    & .modalHeader{
+
+                    }
+                    & .modalBodyBox{
+                        & .modalBody{
+                            & .modalBodyTxt{
+                            }
+                            & .spanBox{
+                            }
+                        }
+                    }
+                    & .modalFooter{
+                        & .pp{
+                            & .ppAnchor{
+                                & img{
+                                }
+                            }
                         }
                     }
                 }
