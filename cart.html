@@ -120,27 +120,25 @@
                                         <img src="./assets/img/svg/menuIcon.svg" alt="menu icon">
                                     </div>
                                 </div>
-                                <div class="col-lg-4 pt-3 pt-lg-0 d-flex">
-                                    <a href="javascript:;" class="headerMiddleAnchor active">
-                                        <span>1</span>
-                                        <span>Bag</span>
-                                    </a>
-                                    <a href="javascript:;" class="headerMiddleAnchor">
-                                        <span>2</span>
-                                        <span>ADDRESS</span>
-                                    </a>
-                                    <a href="javascript:;" class="headerMiddleAnchor">
-                                        <span>3</span>
-                                        <span>INFO</span>
-                                    </a>
-                                    <a href="javascript:;" class="headerMiddleAnchor">
-                                        <span>4</span>
-                                        <span>PAYMENT</span>
-                                    </a>
-                                    <!-- <div class="serachBox position-relative">
-                                        <input type="text" class="form-control shadow-none" placeholder="Search for products...">
-                                        <img src="./assets/img/svg/search.svg" class="searchIcon" alt="search icon">
-                                    </div> -->
+                                <div class="col-lg col-xxl-5 pt-3 pt-lg-0 d-flex justify-content-center">
+                                    <div class="row">
+                                        <a href="javascript:;" class="col-auto d-flex headerMiddleAnchor active">
+                                            <span>1</span>
+                                            <span>Bag</span>
+                                        </a>
+                                        <a href="javascript:;" class="col-auto d-flex headerMiddleAnchor">
+                                            <span>2</span>
+                                            <span>ADDRESS</span>
+                                        </a>
+                                        <a href="javascript:;" class="col-auto d-flex headerMiddleAnchor">
+                                            <span>3</span>
+                                            <span>INFO</span>
+                                        </a>
+                                        <a href="javascript:;" class="col-auto d-flex headerMiddleAnchor">
+                                            <span>4</span>
+                                            <span>PAYMENT</span>
+                                        </a>
+                                    </div>
                                 </div>
                                 <div class="col-auto px-0 d-none d-lg-block">
                                     <ul class="m-0 p-0 list-unstyled navBtnBox d-flex align-items-center">
@@ -151,10 +149,11 @@
                                                 <span>Categories</span>
                                             </a>
                                         </li>
-                                        <li class="navBtn me-1">
+                                        <li class="navBtn me-1 rounded-pill activePill position-relative">
+                                            <span class="badgeClass">1</span>
                                             <a href="javascript:;" class="buttonAnchor">
-                                                <img src="./assets/img/svg/bagIcon.svg" class="defaultImg" alt="">
-                                                <img src="./assets/img/svg/bagIconActive.svg" class="activeImg d-none"  alt="">
+                                                <img src="./assets/img/svg/bagIcon.svg" class="defaultImg d-none" alt="">
+                                                <img src="./assets/img/svg/bagIcoActive.svg" class="activeImg "  alt="">
                                                 <span>Bag</span>
                                             </a>
                                         </li>
@@ -194,9 +193,9 @@
                             <div class="row mx-0 navbarThirdRow w-100 d-lg-none">
                                 <div class="col">
                                     <a href="index.html" class="backAnchor">
-                                        <img src="./assets/img/svg/rightArrow.svg" alt="rightArrow">
+                                        <!-- <img src="./assets/img/svg/rightArrow.svg" alt="rightArrow"> -->
                                         <div class="d-flex align-items-lg-center flex-column flex-lg-row">
-                                            <span class="productName">Categories</span>
+                                            <span class="productName">Shopping Bag</span>
                                         </div>
                                     </a>
                                 </div>
@@ -235,11 +234,12 @@
                                     </div>
                                 </div>
                                 <div class="col-auto d-lg-none">
-                                    <ul class="m-0 p-0 list-unstyled mobMenuLinks d-flex align-items-center">
+                                    <!-- <ul class="m-0 p-0 list-unstyled mobMenuLinks d-flex align-items-center">
                                         <li class="mobMenuItem"><a class="mobMenuLink" href="javascript:;"><img src="./assets/img/svg/searchDark.svg" alt="search icon"></a></li>
                                         <li class="mobMenuItem px-3"><a class="mobMenuLink" href="javascript:;"><img src="./assets/img/svg/categoryIcon.svg" alt="category icon"></a></li>
                                         <li class="mobMenuItem"><a class="mobMenuLink" href="javascript:;"><img src="./assets/img/svg/bagIcon.svg" alt="bag icon"></a></li>
-                                    </ul>
+                                    </ul> -->
+                                    <div class="step text-black">STEP 1/4</div>
                                 </div>
                             </div>
                         </div>
@@ -248,7 +248,7 @@
                     <!-- * Main Content -->
                     <div class="container-fluid cartFluid">
                         <div class="container cartContainer">
-                            <div class="row pt-5 pb-3">
+                            <div class="row pt-5 pb-3 d-lg-block d-none">
                                 <div class="col-8 d-flex justify-content-between">
                                     <div class="cartMainHeading">
                                         Shopping bag(1 Item)
@@ -258,8 +258,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row pt-0 pb-3 d-block d-lg-none">
+                                <div class="col-12 d-flex justify-content-between lg-b col-12 bgColour">
+                                    <div class="cartMainHeading3">
+                                        1 ITEM
+                                    </div>
+                                    <div class="cartMainHeading4">
+                                        Total ₹300
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
-                                <div class="col-8">
+                                <div class="col-lg-8 col-12">
                                     <div class="cartLeftPart">
                                         <div class="row">
                                             <div class="col-auto">
@@ -268,70 +278,122 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="dishName">Book Your Seat - Unlimited Pizza🍕</div>
-                                                <div class="dishPrice">
-                                                    <span>₹300</span>
-                                                    <span><del>₹500</del></span>
-                                                    <span>(40% off)</span>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="dishName">Book Your Seat - Unlimited Pizza🍕</div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="dishPrice">
+                                                            <span>₹300</span>
+                                                            <span><del>₹500</del></span>
+                                                            <span>(40% off)</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="savedMoney">You saved ₹300</div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="row">
+                                                            <div class="col-auto mb-2 mb-sm-0">
+                                                                <select class="js-example-basic-single select2" name="state">
+                                                                    <option value="AL">Size: 1 Person</option>
+                                                                    <option value="WY">Wyoming</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-auto">
+                                                                <select class="js-example-basic-single select2 selecttwo" name="state">
+                                                                    <option value="AL">Qty:1</option>
+                                                                    <option value="WY">Wyoming</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="savedMoney">You saved ₹300</div>
-                                                <select class="js-example-basic-single select2" name="state">
-                                                    <option value="AL">Size: 1 Person</option>
-                                                    <option value="WY">Wyoming</option>
-                                                </select>
-                                                <select class="js-example-basic-single select2 selecttwo" name="state">
-                                                    <option value="AL">Qty:1</option>
-                                                    <option value="WY">Wyoming</option>
-                                                </select>
                                             </div>
-                                            <div class="col-auto">
+                                            <div class="col-auto d-lg-block d-none">
                                                 <button class="removeBtn">Remove</button>
                                             </div>
+                                        <div class="col-12 text-center d-lg-none d-block removeBtn1Border my-3">
+                                            <button class="removeBtn1">Remove</button>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="row pb-5">
+                                <div class="col-lg-4 col-12">
+                                    <div class="row pb-lg-5 pb-0">
                                         <div class="col-12">
                                             <div class="cartrytPart">
-                                                <a href="javascript:;" class="coupanAnchor d-block w-100">
-                                                    <div class="couponDetailParent w-100 d-flex justify-content-between">
-                                                        <div class="image">
-                                                            <img src="assets/img/svg/Frame.svg" alt="">
-                                                        </div>
-                                                        <div class="couponDetail w-100">
-                                                            <span>Coupon and Offers</span>
-                                                            <span class="d-block">Save more with coupon and offers</span>
-                                                        </div>
-                                                        <button class="applayBtn">Apply <img src="assets/img/svg/arrowblue.svg" alt=""></button>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <a href="javascript:;" class="coupanAnchor d-block w-100">
+                                                            <div class="couponDetailParent w-100 d-flex justify-content-between">
+                                                                <div class="image">
+                                                                    <img src="assets/img/svg/Frame.svg" alt="">
+                                                                </div>
+                                                                <div class="couponDetail w-100">
+                                                                    <span>Coupon and Offers</span>
+                                                                    <span class="d-block">Save more with coupon and offers</span>
+                                                                </div>
+                                                                <button class="applayBtn">Apply <img src="assets/img/svg/arrowblue.svg" alt=""></button>
+                                                            </div>
+                                                        </a>
                                                     </div>
-                                                </a>
-                                                <div class="couponData">
-                                                    <div class="row">
-                                                        <div class="col-12 d-flex justify-content-between mt-2">
-                                                            <div class="totalItem">Item total</div>
-                                                            <div class="price"><del>₹500</del> <span>₹200</span></div>
-                                                        </div>
-                                                        <div class="col-12 d-flex justify-content-between mt-2 pb-3">
-                                                            <div class="totalItem">Delivery fee</div>
-                                                            <div class="free">Free</div>
-                                                        </div>
-                                                        <div class="col-12 ">
-                                                            <div class="grandTotal d-flex justify-content-between">
-                                                                <div class="grandTotalTxt">Grand Total <span>Inclusive of all taxes</span></div>
-                                                                <div class="total">₹300</div>
+                                                    <div class="col-12">
+                                                        <div class="couponData">
+                                                            <div class="row">
+                                                                <div class="col-12 d-flex justify-content-between mt-2">
+                                                                    <div class="totalItem">Item total</div>
+                                                                    <div class="price"><del>₹500</del> <span>₹200</span></div>
+                                                                </div>
+                                                                <div class="col-12 d-flex justify-content-between mt-2 pb-3">
+                                                                    <div class="totalItem">Delivery fee</div>
+                                                                    <div class="free">Free</div>
+                                                                </div>
+                                                                <div class="col-12 ">
+                                                                    <div class="grandTotal d-flex justify-content-between">
+                                                                        <div class="grandTotalTxt">Grand Total <span>Inclusive of all taxes</span></div>
+                                                                        <div class="total">₹300</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="avarage">Average delivery time: <span>30-60 minutes</span></div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="saved">
+                                                                        <div class="savedTxt"> ₹200 saved so far on this order</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12 divider d-lg-block d-none">
+                                                                    <button class="bottomBtn">Continue</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-12">
-                                                            <div class="avarage">Average delivery time: <span>30-60 minutes</span></div>
-                                                        </div>
-                                                        <div class="col-12">
-                                                            <div class="saved">
-                                                                <div class="savedTxt"> ₹200 saved so far on this order</div>
+                                                            <div class=" footerFluid d-lg-none d-block">
+                                                                <div class=" footerContainer">
+                                                                    <div class="footerdata">
+                                                                        <div class="row justify-content-center align-items-center">
+                                                                            <div class="col-12">
+                                                                                <div class="paymentMethods d-flex justify-content-center">
+                                                                                    <img src="assets/img/svg/visaimg.svg" alt="">
+                                                                                    <img src="assets/img/svg/visa2.svg" alt="">
+                                                                                    <img src="assets/img/svg/visa3.svg" alt="">
+                                                                                    <img src="assets/img/svg/visa4.svg" alt="">
+                                                                                    <img src="assets/img/svg/visa5.svg" alt="">
+                                                                                    <img src="assets/img/svg/visa6.svg" alt="">
+                                                                                    <img src="assets/img/svg/visa7.svg" alt="">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-12">
+                                                                                <div class="security d-flex justify-content-center">
+                                                                                    <img src="assets/img/svg/lockkk.svg" class="me-2" alt="">
+                                                                                    100% Secured payments
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="col-12 divider">
-                                                            <button class="bottomBtn">Continue</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -345,7 +407,7 @@
                     <!-- * Main Content End -->
                     <!-- * Footer -->
                     <footer>
-                        <div class="container-fluid footerFluid">
+                        <div class="container-fluid footerFluid d-lg-block d-none">
                             <div class="container footerContainer">
                                 <div class="footerdata">
                                     <div class="row align-items-center">
@@ -471,9 +533,22 @@
 
                     <!-- ! bottom fixed Section Fixed -->
                     <div class="container-fluid bg-white fixed-bottom fotterFixed d-lg-none">
-                        <div class="row justify-content-center align-items-center innerFooter gx-sm-3 gx-2">
+                        <div class="container">
+                            <div class="row BorderFixed">
+                                <div class="col-auto">
+                                    <div class="fixedTxt">
+                                        ₹500
+                                        <a href="javascript:;" class="fixedTxtAnchor">View price details</a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <button class="fixedBtn1">Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center innerFooter gx-sm-3 gx-2 border-top">
                             <div class="col-auto"><a href="javascript:;" class="d-flex fixedBtn rounded-pill align-items-center gap-sm-2 gap-1"><div class="pageImg1 pageImage d-flex"><img src="assets/img/svg/home.svg" alt="" class="h-100"></div><div class="pageImg2 pageImage d-none"><img src="assets/img/svg/homefill_icon.svg" alt="" class="h-100"></div> Home</a></div>
-                            <div class="col-auto"><a href="javascript:;" class="d-flex fixedBtn rounded-pill align-items-center gap-sm-2 gap-1"><div class="pageImg1 pageImage d-flex"><img src="assets/img/svg/bagIcon.svg" alt="" class="h-100"></div><div class="pageImg2 pageImage d-none"><img src="assets/img/svg/bagIcoActive.svg" alt="" class="h-100"></div> Bag</a></div>
+                            <div class="col-auto position-relative"><a href="javascript:;" class="d-flex fixedBtn rounded-pill align-items-center gap-sm-2 gap-1"><div class="pageImg1 pageImage d-none"><img src="assets/img/svg/bagIcon.svg" alt="" class="h-100"></div><div class="pageImg2 pageImage d-flex"><img src="assets/img/svg/bagIcoActive.svg" alt="" class="h-100"></div><span class="badgeClass">1</span> Bag</a></div>
                             <div class="col-auto"><a href="javascript:;" class="d-flex fixedBtn rounded-pill align-items-center gap-sm-2 gap-1"><div class="pageImg1 pageImage d-flex"><img src="assets/img/svg/accountIcon.svg" alt="" class="h-100"></div><div class="pageImg2 pageImage d-none"><img src="assets/img/svg/accountActive.svg" alt="" class="h-100"></div> Account</a></div>
                         </div>
                     </div>
@@ -521,7 +596,9 @@
         <script>
             // In your Javascript (external .js resource or <script> tag)
             $(document).ready(function() {
-                $('.js-example-basic-single').select2();
+                $('.js-example-basic-single').select2({
+                    minimumResultsForSearch: -1
+                });
             });
         </script>
     </body>
