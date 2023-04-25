@@ -450,6 +450,7 @@
                         display: flex;
                         align-items: center;
                         line-height: 25px;
+                        text-decoration: none;
                         & img{
                             height: 10px;
                             width: 15px;
@@ -629,6 +630,7 @@
         }
         & .headerMiddleAnchor{
             padding-right: 50px;
+            text-decoration: none;
             &.active{
                 & span:first-child{
                     width: 25px;
@@ -809,6 +811,7 @@
                                         display: block;
                                         position: relative;
                                         transition: 0.3s linear;
+                                        text-decoration: none;
                                         &:hover{
                                             color: #146EB4 !important;
                                         }

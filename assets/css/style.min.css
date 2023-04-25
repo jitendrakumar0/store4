@@ -836,6 +836,7 @@ nav .breadcrumb .breadcrumb-item a:hover {
   font-weight: 500;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .topNavbar .navbarTopRow .logo img {
   max-width: 160px;
@@ -871,6 +872,7 @@ nav .breadcrumb .breadcrumb-item a:hover {
   padding: 6px 10px;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .topNavbar .navbarTopRow .navBtnBox .navBtn .buttonAnchor span {
   font-size: 14px;
@@ -1522,6 +1524,7 @@ nav .breadcrumb .breadcrumb-item a:hover {
   display: flex;
   align-items: center;
   line-height: 25px;
+  text-decoration: none;
 }
 .cartFluid .cartContainer .cartrytPart .coupanAnchor .couponDetailParent .applayBtn img {
   height: 10px;
@@ -1657,6 +1660,7 @@ nav .breadcrumb .breadcrumb-item a:hover {
 
 .topNavbar .navbarTopRow .headerMiddleAnchor {
   padding-right: 50px;
+  text-decoration: none;
 }
 .topNavbar .navbarTopRow .headerMiddleAnchor.active span:first-child {
   width: 25px;
@@ -1818,6 +1822,7 @@ nav .breadcrumb .breadcrumb-item a:hover {
   display: block;
   position: relative;
   transition: 0.3s linear;
+  text-decoration: none;
 }
 .homePagEHeroFluid .homePagEHeroContainer .POSITION .foodVarietyListBox .foodVarietyListBoxUl .foodVarietyListBoxLi .foodVarietyListBoxLAnchor:hover {
   color: #146EB4 !important;
